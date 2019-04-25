@@ -32,7 +32,7 @@ Example: 2019-04-24-HelloWorld.md
 
 ### Add a header
 
-The following header can be added to every blog post, although you might want to do something different. It's up to you, really.
+The following header must be added to every blog post, although you might want to customize title and other things. It's up to you, really. The HOME link for example is totally a personal choice.
 ```
 ---
 layout: default
