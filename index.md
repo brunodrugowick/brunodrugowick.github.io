@@ -14,7 +14,7 @@ Coming soon...
 
 | Project       | Description       | Links     |
 | ------------- | ----------------- | ------------- | {% for project in site.data.projects %}
-| {{ project.name }}  | {{ project.description }} | [GitHub]({{ project.github }}) <br> {% if project.link != null %} <a href="{{ project.link }}" target="_blank">App</a> {% endif %} | {% endfor %}
+| {{ project.name }}  | {{ project.description }} | [GitHub]({{ project.github }}) <br> {% if project.link != null %} <a href="{{ project.link }}" target="_blank">App <img src="assets/img/external-link-altstyle=solid.svg" width="15px"/></a> {% endif %} | {% endfor %}
 
 # Blog posts
 
