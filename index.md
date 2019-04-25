@@ -12,9 +12,9 @@ Coming soon...
 
 # Active Projects
 
-| Project       | Description       | More info     |
+| Project       | Description       | Links     |
 | ------------- | ----------------- | ------------- | {% for project in site.data.projects %}
-| {{ project.name }}  | {{ project.description }} | [GitHub page]({{ project.link }}) | {% endfor %}
+| {{ project.name }}  | {{ project.description }} | [GitHub]({{ project.github }}) <br> {% if project.link != null %} <a href="{{ project.link }}" target="_blank">App</a> {% endif %} | {% endfor %}
 
 # Blog posts
 

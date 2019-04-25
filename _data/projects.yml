@@ -1,15 +1,17 @@
 - name: This Website
   description: A curriculum and a programming blog.
-  link: https://github.com/brunodrugowick/brunodrugowick.github.io
+  github: https://github.com/brunodrugowick/brunodrugowick.github.io
+  link: /
 
 - name: Drugo Petclinic
   description: An implementation of the well-know Spring Pet Clinic based on John Thompson's Udemy course.
-  link: https://github.com/brunodrugowick/drugo-petclinic
+  github: https://github.com/brunodrugowick/drugo-petclinic
+  link: https://drugo-petclinic.herokuapp.com/
 
 - name: Programming Studies
   description: A study guide to improve my programming skills.
-  link: https://github.com/brunodrugowick/ProgrammingStudies
+  github: https://github.com/brunodrugowick/ProgrammingStudies
 
 - name: Find PC Parts
   description: A front end for a friend's app to learn more about Angular.
-  link: https://github.com/brunodrugowick/find-pc-parts-angular
+  github: https://github.com/brunodrugowick/find-pc-parts-angular
