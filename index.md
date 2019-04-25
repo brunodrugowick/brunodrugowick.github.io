@@ -8,7 +8,7 @@ Coming soon...
 # Useful Links
 
 {% for link in site.data.links %} 
-- {{ link.title }}: [{{ link.url }}]({{ link.url }}) {% endfor %}
+- [{{ link.url }}]({{ link.url }}) {% endfor %}
 
 # Active Projects
 
