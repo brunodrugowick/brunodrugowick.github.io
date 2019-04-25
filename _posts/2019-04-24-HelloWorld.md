@@ -3,7 +3,7 @@ layout: default
 title: Hello World
 ---
 
-[<< back]({{ site.url }})
+[back]({{ site.url }})
 
 # Hi, there...
 
