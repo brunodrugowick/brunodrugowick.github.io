@@ -15,6 +15,19 @@ Create an `index.md` file with the following content:
 
 Now your website is up and running at `https://<username>.github.io`.
 
+## Theming
+
+You can theme GitHub pages simply by going to your repository Settings page and selecting a theme using the Theme Chooser on the GitHub Pages section. What this does is create a file on the root of your project... so, if you create the file yourself, you're done. Follow the steps:
+
+1. Create a file named `_config.yml` on the root of your GitHub Pages repository.
+2. Add the following to the file:
+    ```
+    theme: jekyll-theme-cayman
+    ```
+3. Commit the file and push it to GitHub.
+
+You're themed! If you want to use other themes, you can either go to your repository Settings page or [learn more here](https://help.github.com/en/articles/adding-a-jekyll-theme-to-your-github-pages-site).
+
 ## Blog Posts
 
 ### Create a file
@@ -31,10 +44,11 @@ The following header can be added to every blog post, although you might want to
 ```
 ---
 layout: default
-title: Hello World
+title: GitHub Pages - How To
 ---
 
-[HOME]({{ site.url }})
+[HOME]({{ site.url }}) | CURRICULUM
+---
 ```
 
 You then start writing your post using Markdown syntax.
@@ -44,3 +58,13 @@ You then start writing your post using Markdown syntax.
 You don't want to edit everything on your web browser, do you? Especially after you start to know [everything Jekyll can do](https://jekyllrb.com/docs/).
 
 To build the website locally follow the instructions [here](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll). You'll need Ruby. Build and run locally with `bundle exec jekyll serve` after configuring everything.
+
+## Finally...
+
+There's way more to learn about GitHub Pages and Jekyll, but I'd like to suggest just one more piece of documentation:
+
+[Jekyll Data Files](https://jekyllrb.com/docs/datafiles/)
+
+Jekyll Data Files are very useful to organize the information on your GitHub Page. It gives you the ability to edit sections of your page without touching the markup file (.md or .html), just like I taught you with the Posts, but for your own data structures. 
+
+If you want to take a look, this websites uses, so far, Data Files for the "Useful Links" and "Active Projects" sections.

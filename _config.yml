@@ -1,2 +1,4 @@
 theme: jekyll-theme-cayman
-url: https://brunodrugowick.github.io
+title: "Bruno Drugowick"
+description: "Curriculum, contact and information on stuff that I find interesting."
+show_downloads: true

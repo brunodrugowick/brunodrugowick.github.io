@@ -3,7 +3,8 @@ layout: default
 title: Hello World
 ---
 
-[HOME]({{ site.url }})
+##### [HOME]({{ site.url }}) | CURRICULUM
+---
 
 # Hi, there...
 

@@ -3,7 +3,8 @@ layout: default
 title: GitHub Pages - How To
 ---
 
-[HOME]({{ site.url }})
+##### [HOME]({{ site.url }}) | CURRICULUM
+---
 
 # GitHub Pages
 
@@ -62,3 +63,13 @@ You then start writing your post using Markdown syntax.
 You don't want to edit everything on your web browser, do you? Especially after you start to know [everything Jekyll can do](https://jekyllrb.com/docs/).
 
 To build the website locally follow the instructions [here](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll). You'll need Ruby. Build and run locally with `bundle exec jekyll serve` after configuring everything.
+
+## Finally...
+
+There's way more to learn about GitHub Pages and Jekyll, but I'd like to suggest just one more piece of documentation:
+
+[Jekyll Data Files](https://jekyllrb.com/docs/datafiles/)
+
+Jekyll Data Files are very useful to organize the information on your GitHub Page. It gives you the ability to edit sections of your page without touching the markup file (.md or .html), just like I taught you with the Posts, but for your own data structures. 
+
+If you want to take a look, this websites uses, so far, Data Files for the "Useful Links" and "Active Projects" sections.
