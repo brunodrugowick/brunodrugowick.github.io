@@ -1,0 +1,2 @@
+# Files under _site are local builds. GitHub builds everything when merging or commiting to master, so this should not be versioned.
+_site/*

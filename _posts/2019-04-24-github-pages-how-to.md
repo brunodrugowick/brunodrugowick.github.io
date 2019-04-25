@@ -1,4 +1,9 @@
-The latest version of this site can be seen at [https://brunodrugowick.github.io](https://brunodrugowick.github.io).
+---
+layout: default
+title: GitHub Pages - How To
+---
+
+[HOME]({{ site.url }})
 
 # GitHub Pages
 
