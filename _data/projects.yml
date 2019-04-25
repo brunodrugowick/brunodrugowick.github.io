@@ -4,7 +4,7 @@
   link: /
 
 - name: Drugo Petclinic
-  description: An implementation of the well-know Spring Pet Clinic based on John Thompson's Udemy course.
+  description: An implementation of the well-known Spring Pet Clinic based on John Thompson's Udemy course.
   github: https://github.com/brunodrugowick/drugo-petclinic
   link: https://drugo-petclinic.herokuapp.com/
 
