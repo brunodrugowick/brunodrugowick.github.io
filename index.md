@@ -1,2 +1,9 @@
-# Bruno Drugowick Muniz
-Contact me: bruno.drugowick@gmail.com.
+# Contact Info
+
+Email: bruno.drugowick@gmail.com.
+
+# Blog posts
+
+{% for post in site.posts %}
+-  [{{ post.title }}]({{ post.url }})
+{% endfor %}
