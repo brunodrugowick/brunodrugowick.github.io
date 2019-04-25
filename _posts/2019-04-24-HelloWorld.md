@@ -1,7 +1,9 @@
 ---
-layout: post
+layout: default
 title: Hello World
 ---
+
+[<< back]({{ site.url }})
 
 # Hi, there...
 
