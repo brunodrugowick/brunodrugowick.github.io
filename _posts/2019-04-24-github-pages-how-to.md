@@ -20,6 +20,19 @@ Create an `index.md` file with the following content:
 
 Now your website is up and running at `https://<username>.github.io`.
 
+## Theming
+
+You can theme GitHub pages simply by going to your repository Settings page and selecting a theme using the Theme Chooser on the GitHub Pages section. What this does is create a file on the root of your project... so, if you create the file yourself, you're done. Follow the steps:
+
+1. Create a file named `_config.yml` on the root of your GitHub Pages repository.
+2. Add the following to the file:
+    ```
+    theme: jekyll-theme-cayman
+    ```
+3. Commit the file and push it to GitHub.
+
+You're themed! If you want to use other themes, you can either go to your repository Settings page or [learn more here](https://help.github.com/en/articles/adding-a-jekyll-theme-to-your-github-pages-site).
+
 ## Blog Posts
 
 ### Create a file
