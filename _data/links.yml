@@ -1,5 +1,7 @@
 - title: GitHub
+  text: github.com/brunodrugowick
   url: https://github.com/brunodrugowick
 
 - title: Contact
-  url: bruno.drugowick@gmail.com
+  text: bruno.drugowick@gmail.com
+  url: mailto:bruno.drugowick@gmail.com
