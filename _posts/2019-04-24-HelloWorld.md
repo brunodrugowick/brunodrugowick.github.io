@@ -1,12 +1,9 @@
 ---
 layout: default
-title: Hello World
+title: Hello, World
+showOnHome: false
+excerpt_separator: <!--more-->
 ---
-
-##### [HOME]({{ site.url }}) | CURRICULUM
----
-
-# Hi, there...
 
 I've been writing for several years now, on several platforms. But never in english and never focusing on programming.
 

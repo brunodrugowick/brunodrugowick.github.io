@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content" class="skip">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ site.title }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      {% if site.show_links %}
+        {% if page.buildUrl == 'index.html' %}
+          <a href="index.html" class="btn_pressed">HOME</a>
+        {% else %}
+          <a href="index.html" class="btn">HOME</a>
+        {% endif %}
+
+        {% if page.buildUrl == 'blog.html' %}
+          <a href="blog.html" class="btn_pressed">BLOG</a>
+        {% else %}
+          <a href="blog.html" class="btn">BLOG</a>
+        {% endif %}
+        
+        {% if page.buildUrl == 'projects.html' %}
+          <a href="projects.html" class="btn_pressed">PROJECTS</a>
+        {% else %}
+          <a href="projects.html" class="btn">PROJECTS</a>
+        {% endif %}
+
+        {% if page.buildUrl == 'aboutme.html' %}
+          <a href="aboutme.html" class="btn_pressed">ABOUT ME</a>
+        {% else %}
+          <a href="aboutme.html" class="btn">ABOUT ME</a>
+        {% endif %}
+        
+      {% endif %}
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">This site was generated using <a href="https://pages.github.com/">GitHub Pages.</a> View the project on my <a href="{{ site.github.repository_url }}">GitHub</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

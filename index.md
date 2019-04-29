@@ -1,22 +1,18 @@
-##### [HOME]({{ site.url }}) | CURRICULUM
+---
+buildUrl: index.html
 ---
 
-# Curriculum
+This is my landing page. Here you'll find my blog, projects I'm working on and more information about me (including a brief curriculum).
 
-Coming soon...
+---
+{% for post in site.posts %} {% if post.showOnHome %} 
+## {{ post.title }}
+##### {{ post.date | date: "%a, %b %d, %y" }}
+{{ post.excerpt }} {% endif %} {% endfor %}
+###### THAT'S THE MOST RECENT BLOG ENTRY. CONTINUE READING AT THE [BLOG](blog.html).
 
-# Useful Links
+---
 
-{% for link in site.data.links %} 
-- [{{ link.text }}]({{ link.url }}) {% endfor %}
+# That's me
 
-# Active Projects
-
-| Project       | Description       | Links     |
-| ------------- | ----------------- | ------------- | {% for project in site.data.projects %}
-| {{ project.name }}  | {{ project.description }} | [GitHub]({{ project.github }}) <br> {% if project.link != null %} <a href="{{ project.link }}" target="_blank">App <img src="assets/img/external-link-altstyle=solid.svg" width="15px"/></a> {% endif %} | {% endfor %}
-
-# Blog posts
-
-{% for post in site.posts %} 
-- [{{ post.title }}]({{ post.url }}) {% endfor %}
+![That's me!](assets/img/Drugo_2019.jpg)

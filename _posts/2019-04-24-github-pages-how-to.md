@@ -1,14 +1,13 @@
 ---
 layout: default
-title: GitHub Pages - How To
+title: How to Use GitHub Pages
+showOnHome: true
+excerpt_separator: <!--more-->
 ---
-
-##### [HOME]({{ site.url }}) | CURRICULUM
----
-
-# GitHub Pages
 
 GitHub Pages can serve static content for free using your GitHub account. I use Jekyll to theme and blog on this website. Whenever you commit to your GitHub Pages repository, [Jekyll](https://jekyllrb.com/) runs to rebuild the pages in your site, from the content in your Markdown (or HTML) files.
+
+<!--more-->
 
 ## Quick Start
 
