@@ -16,7 +16,7 @@ buildUrl: aboutme.html
 
 Well, that's `in a nutshell`, but every experience mentioned above, even before 2010, was/is important and made me into the professional I'm today.
 
-If you wanto to know more, I really enjoy a good conversation! Use the links below to contact me.
+If you want to know more, I really enjoy a good conversation! Use the links below to contact me.
 
 # Links
 
