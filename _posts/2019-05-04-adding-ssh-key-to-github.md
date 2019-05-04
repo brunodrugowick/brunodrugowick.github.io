@@ -7,9 +7,9 @@ excerpt_separator: <!--more-->
 
 It's fairly easy to follow [GitHub's official documentation](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account) on how to add your SSH key to your account. This version is quickier and you can find all necessary commands below. Follow this if you use a Linux distribution.
 
-<!--more-->
-
 You can follow this procedure with a few modifications for GitLab and Bitbucket.
+
+<!--more-->
 
 ## Generating a SSH key
 
@@ -50,4 +50,4 @@ cat ~/.ssh/id_rsa.pub
 - Choose a good title, like `Living Room Desktop SSH Key`.
 - Paste your SSH key on the `Key` text area.
 
-Now you can clone, commit and everything else without typing your password on every operation.
+Now all operations to/from GitHub (`clone`, `pull`, `push` and others) can be performed safely without typing user and password every time.
