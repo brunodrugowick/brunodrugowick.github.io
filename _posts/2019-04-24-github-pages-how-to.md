@@ -1,7 +1,7 @@
 ---
 layout: default
 title: How to Use GitHub Pages
-showOnHome: true
+showOnHome: false
 excerpt_separator: <!--more-->
 ---
 
