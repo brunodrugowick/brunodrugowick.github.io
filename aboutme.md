@@ -8,7 +8,7 @@ buildUrl: aboutme.html
 
 - **`2010 - March 2015`** Developer in the ITSM industry. Worked with `BMC Remedy ITSM` suite and `BMC Atrium Orchestrator`, mostly. My roles ranged from Developer to Technical Leader towards the end of this period.
 
-- **`March 2015 - June 2016`** Team Leader. This added to my previous roles as a promotion. My responsibilities were to develop and `coordinate a team` of around 10 people. I also took part in the company's `mentoring program` as a mentor for other professionals. 
+- **`March 2015 - June 2016`** Team Leader. This only added to my previous roles, acting as a promotion. My responsibilities were to develop and `coordinate a team` of around 10 people. I also took part in the company's `mentoring program` as a mentor for other professionals. 
 
 - **`June 2016 - July 2018`** Manager. This was a big change in my carrer. From this point on I started working with more traditional development tools and languages. I was Manager of a Business Unit, taking part on the staff meetings and dealing with the company's strategy. During this period some of the roles I played included Scrum Master, Product Owner and Team Leader.
 
