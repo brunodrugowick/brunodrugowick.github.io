@@ -18,7 +18,15 @@ Well, that's my experience `in a nutshell`, but every experience mentioned above
 
 If you want to know more, I really enjoy a good conversation! Use the links below to contact me.
 
-# Links
+---
+
+# Contact
 
 {% for link in site.data.links %} 
 - [{{ link.text }}]({{ link.url }}) {% endfor %}
+
+---
+
+# That's me
+
+![That's me!](assets/img/Drugo_2019.jpg)

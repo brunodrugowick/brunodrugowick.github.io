@@ -5,6 +5,8 @@ showOnHome: true
 excerpt_separator: <!--more-->
 ---
 
+# GitHub Pages and Google Domains together
+
 Oh, that annoyed me more than it should. Yes, it's quite easy to make your custom domain point to your GitHub Pages project, but from the confusing GitHub documentation (too much freaking information) to the annoying first-page Google results, took me a while for everything to work properly.
 
 Now I have my GitHub Pages project working fine over HTTPS with my custom domain on [https://drugowick.dev](https://drugowick.dev) or [https://www.drugowick.dev](https://www.drugowick.dev).

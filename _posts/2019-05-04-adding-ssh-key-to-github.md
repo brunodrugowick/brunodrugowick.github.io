@@ -5,6 +5,8 @@ showOnHome: false
 excerpt_separator: <!--more-->
 ---
 
+# Adding SSH key to GitHub
+
 It's fairly easy to follow [GitHub's official documentation](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account) on how to add your SSH key to your account. This version is quickier and you can find all necessary commands below. Follow this if you use a Linux distribution.
 
 You can follow this procedure with a few modifications for GitLab and Bitbucket.
