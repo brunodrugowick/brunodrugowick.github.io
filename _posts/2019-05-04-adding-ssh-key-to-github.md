@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Adding SSH key to GitHub
-showOnHome: true
+showOnHome: false
 excerpt_separator: <!--more-->
 ---
 

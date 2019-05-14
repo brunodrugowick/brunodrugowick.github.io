@@ -27,27 +27,27 @@
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if site.show_links %}
         {% if page.buildUrl == 'index.html' %}
-          <a href="index.html" class="btn_pressed">HOME</a>
+          <a href="/index.html" class="btn_pressed">HOME</a>
         {% else %}
-          <a href="index.html" class="btn">HOME</a>
+          <a href="/index.html" class="btn">HOME</a>
         {% endif %}
 
         {% if page.buildUrl == 'blog.html' %}
-          <a href="blog.html" class="btn_pressed">BLOG</a>
+          <a href="/blog.html" class="btn_pressed">BLOG</a>
         {% else %}
-          <a href="blog.html" class="btn">BLOG</a>
+          <a href="/blog.html" class="btn">BLOG</a>
         {% endif %}
         
         {% if page.buildUrl == 'projects.html' %}
-          <a href="projects.html" class="btn_pressed">PROJECTS</a>
+          <a href="/projects.html" class="btn_pressed">PROJECTS</a>
         {% else %}
-          <a href="projects.html" class="btn">PROJECTS</a>
+          <a href="/projects.html" class="btn">PROJECTS</a>
         {% endif %}
 
         {% if page.buildUrl == 'aboutme.html' %}
-          <a href="aboutme.html" class="btn_pressed">ABOUT ME</a>
+          <a href="/aboutme.html" class="btn_pressed">ABOUT ME</a>
         {% else %}
-          <a href="aboutme.html" class="btn">ABOUT ME</a>
+          <a href="/aboutme.html" class="btn">ABOUT ME</a>
         {% endif %}
         
       {% endif %}
