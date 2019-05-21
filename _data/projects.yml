@@ -1,23 +1,28 @@
-- name: This Website
-  description: A home page and a programming blog.
-  github: https://github.com/brunodrugowick/brunodrugowick.github.io
-  link: /
-
 - name: WIP Drugo Petclinic
   description: An implementation of the well-known Spring Pet Clinic based on John Thompson's Udemy course.
   github: https://github.com/brunodrugowick/drugo-petclinic
   link: https://drugo-petclinic.herokuapp.com/
 
-- name: Programming Studies
-  description: A study guide to improve my programming skills.
-  github: https://github.com/brunodrugowick/ProgrammingStudies
-
 - name: Find PC Parts
   description: A front end for a friend's app to learn more about Angular.
   github: https://github.com/brunodrugowick/find-pc-parts-angular
   link: https://upbeat-kirch-9dac54.netlify.com/
-  
+
 - name: WIP Recipes Demo App
   description: A demo Spring 5 app being developed alongside the Petclinic app.
   github: https://github.com/brunodrugowick/spring5-recipes-app
   link: https://drugo-recipes-demo.herokuapp.com/
+
+- name: WIP Boilerplate Spring Vue.js App
+  description: A Spring Boot application with Thymeleaf handling the pages to be provided and Vue.js with Axios requesting additional data.
+  github: https://github.com/brunodrugowick/springboot-vue-axios-boilerplate
+  link: https://spring-vue-axios-boilerplate.herokuapp.com/
+
+- name: This Website
+  description: A home page and a programming blog.
+  github: https://github.com/brunodrugowick/brunodrugowick.github.io
+  link: /
+
+- name: Programming Studies
+  description: A study guide to improve my programming skills.
+  github: https://github.com/brunodrugowick/ProgrammingStudies
