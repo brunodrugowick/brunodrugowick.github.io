@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GitHub Pages and Google Domains together
+title: The SHAME ON ME fix
 showOnHome: true
 excerpt_separator: <!--more-->
 ---
