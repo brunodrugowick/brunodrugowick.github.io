@@ -1,7 +1,7 @@
 ---
 layout: default
 title: GitHub Pages and Google Domains together
-showOnHome: true
+showOnHome: false
 excerpt_separator: <!--more-->
 ---
 
