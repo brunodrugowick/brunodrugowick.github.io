@@ -10,7 +10,7 @@ buildUrl: aboutme.html
 
 - **`March 2015 - June 2016`** Team Leader. This only added to my previous roles, acting as a promotion. My responsibilities were to develop and `coordinate a team` of around 10 people. I also took part in the company's `mentoring program` as a mentor for other professionals. 
 
-- **`June 2016 - July 2018`** Manager. This was a big change in my carreer. From this point on I started working with more traditional development tools and languages. I was Manager of a Business Unit, taking part on the staff meetings and dealing with the company's strategy. During this period some of the roles I played included Scrum Master, Product Owner and Team Leader.
+- **`June 2016 - July 2018`** Manager. This was a big change in my career. From this point on I started working with more traditional development tools and languages. I was Manager of a Business Unit, taking part on the staff meetings and dealing with the company's strategy. During this period some of the roles I played included Scrum Master, Product Owner and Team Leader.
 
 - **`July 2018 - Present`** Technology Coordinator. Now fully managing the development and support of a product, I still act as a Team Leader but also work on the architecture of the application, design and code reviews. Some of the technologies I work with (actually since 2016) are `Spring Framework`, `Thymeleaf`, `AngularJS`, `MongoDB`, `HSQLDB`, `Git`, `GitLab`...
 
