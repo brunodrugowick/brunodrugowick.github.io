@@ -3,13 +3,13 @@
   github: https://github.com/brunodrugowick/drugo-petclinic
   link: https://drugo-petclinic.herokuapp.com/
   
-- name: Leaderboard API for at-the-tsbyss game.
+- name: Leaderboard API for at-the-tsbyss game
   description: A NodeJS (+ MongoDB) API to store the scores for the at-the-tsbyss game.
   github: https://github.com/brunodrugowick/at-the-tsbyss-leaderboard
   link: https://one-two.github.io/
 
 - name: Instagram Clone
-  description: A very cool and addictive 2-weeks project that aims to mimic Instagram Feed with Like and Upload features using NodeJS as backend, React on the frontend and React Native on a mobile app. It uses websockets, which is nice! I added some features like comments, a red heart when you click like and made some of my own decisions when coding.
+  description: A very cool and addictive 2-week project that aims to mimic Instagram Feed with Like and Upload features using NodeJS as backend, React on the frontend and React Native on a mobile app. It uses websockets, which is nice! I added some features like comments, a red heart when you click like and made some of my own decisions when coding.
   github: https://github.com/brunodrugowick/omnistack-quick-start-frontend
   link: https://omnistack-quick-start-frontend.herokuapp.com/
 
