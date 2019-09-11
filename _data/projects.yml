@@ -7,6 +7,11 @@
   description: A NodeJS (+ MongoDB) API to store the scores for the at-the-tsbyss game.
   github: https://github.com/brunodrugowick/at-the-tsbyss-leaderboard
   link: https://one-two.github.io/
+  
+- name: Spring Boot HAL/HATEOAS API
+  description: Reimplemented the leaderboard for the at-the-tsbyss quickly using Spring Boot with REST, HAL/HATEOAS, Repositories etc.
+  github: https://github.com/brunodrugowick/at-the-tsbyss-leaderboard-springboot
+  link: https://drugo-spring-boot-hal-api.herokuapp.com/
 
 - name: Tindev
   description: Project from "Semana Omnistack 8" with some of my own decisions. Backend + Frontend.
