@@ -1,3 +1,8 @@
+- name: WIP Drugo Investments
+  description: An app to manage my investments. Developed on Spring Boot (Spring Security, Thymeleaf, JPA), Bootstrap and I plan to use VueJS + Axios at some point.
+  github: https://github.com/brunodrugowick/investments-app
+  link: https://drugo-investments-app.herokuapp.com/
+
 - name: WIP Drugo Petclinic
   description: An implementation of the well-known Spring Pet Clinic based on John Thompson's Udemy course.
   github: https://github.com/brunodrugowick/drugo-petclinic
