@@ -1,3 +1,8 @@
+- name: WIP AlgafoodAPI
+  description: A project based on a course from Algaworks. Algafood API is a REST API for a food delivery solution.
+  github: https://github.com/brunodrugowick/algafood-api
+  link: https://algafoodapi.herokuapp.com/
+
 - name: WIP Drugo Investments
   description: An app to manage my investments. Developed on Spring Boot (Spring Security, Thymeleaf, JPA), Bootstrap and I plan to use VueJS + Axios at some point.
   github: https://github.com/brunodrugowick/investments-app
@@ -33,12 +38,7 @@
   github: https://github.com/brunodrugowick/find-pc-parts-angular
   link: https://upbeat-kirch-9dac54.netlify.com/
 
-- name: WIP Recipes Demo App
-  description: A demo Spring 5 app being developed alongside the Petclinic app.
-  github: https://github.com/brunodrugowick/spring5-recipes-app
-  link: https://drugo-recipes-demo.herokuapp.com/
-
-- name: WIP Boilerplate Spring Vue.js App
+- name: Boilerplate Spring Vue.js App
   description: A Spring Boot application with Thymeleaf handling the pages to be provided and Vue.js with Axios requesting additional data.
   github: https://github.com/brunodrugowick/springboot-vue-axios-boilerplate
   link: https://spring-vue-axios-boilerplate.herokuapp.com/
