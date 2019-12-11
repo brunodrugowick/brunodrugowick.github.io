@@ -13,42 +13,45 @@ It's been a while that I wanted to try something with Generics. The opportunity 
 
 ## The Opportunity
 
-I was implementing a PATCH HTTP request on a controller for a entity called Restaurant as part of a REST API course I'm taking. The implementation that the instructor came up with was something like this (using Reflection):
+I was implementing a PATCH HTTP request on a controller for an entity called Restaurant as part of a REST API course I'm taking. The implementation that the instructor came up with was something like this (using Reflection):
 
 ```java
-  @PatchMapping("/{id}")
-	public ResponseEntity<?> partialUpdate(@PathVariable Long id, @RequestBody Map<String, Object> restaurantMap) {
-		Restaurant restaurantToUpdate = restaurantCrudService.read(id);
+@PatchMapping("/{id}")
+public ResponseEntity<?> partialUpdate(@PathVariable Long id, @RequestBody Map<String, Object> restaurantMap) {
+    Restaurant restaurantToUpdate = restaurantCrudService.read(id);
 
-		if (restaurantToUpdate == null) {
-			return ResponseEntity.notFound().build();
-		}
-    
-		merge(restaurantMap, restaurantToUpdate);
-
-		return update(id, restaurantToUpdate);
-	}
-
-  public merge(Map<String, Object> objectMap, Restaurant restaurantToUpdate) {
-        ObjectMapper objectMapper = new OjectMapper()
-        Restaurant newObject = objectMapper.convertValue(objectMap, Restaurant.class);
-
-        objectMap.forEach((fieldProp, valueProp) -> {
-            Field field = ReflectionUtils.findField(Restaurant.class, fieldProp);
-            field.setAccessible(true);
-
-            Object newValue = ReflectionUtils.getField(field, newObject);
-
-            ReflectionUtils.setField(field, objectToUpdate, newValue);
-        });
+    if (restaurantToUpdate == null) {
+        return ResponseEntity.notFound().build();
     }
+    
+    merge(restaurantMap, restaurantToUpdate);
+
+    return update(id, restaurantToUpdate);
+}
+
+public merge(Map<String, Object> objectMap, Restaurant restaurantToUpdate) {
+    ObjectMapper objectMapper = new OjectMapper()
+    Restaurant newObject = objectMapper.convertValue(objectMap, Restaurant.class);
+
+    objectMap.forEach((fieldProp, valueProp) -> {
+        Field field = ReflectionUtils.findField(Restaurant.class, fieldProp);
+        field.setAccessible(true);
+
+        Object newValue = ReflectionUtils.getField(field, newObject);
+
+        ReflectionUtils.setField(field, objectToUpdate, newValue);
+    });
+}
 ```
 
 And I'd have to reimplement this method on all my controllers (for other entities). So, I tried to create a solution with Generics.
 
 ## The Solution
 
-TL;DR: [the commit with the solution](https://github.com/brunodrugowick/algafood-api/commit/0d5b7bc25bc1a7c69d523c19c4a1abef10f862ce).
+TL;DR: 
+
+- [the commit with the first solution](https://github.com/brunodrugowick/algafood-api/commit/0d5b7bc25bc1a7c69d523c19c4a1abef10f862ce).
+- [amendment to reduce configuration](https://github.com/brunodrugowick/algafood-api/commit/940020631adab29a8c92707252e54c7df02af813)
 
 ### The Generic Class
 
@@ -60,12 +63,16 @@ public class ObjectMerger<T> {
     private ObjectMapper objectMapper;
     private Class<T> type;
 
-    public ObjectMerger(Class<T> type) {
+    private ObjectMerger(Class<T> type) {
         this.objectMapper = new ObjectMapper();
         this.type = type;
     }
 
-    public T mergeRequestBodyToGenericObject(Map<String, Object> objectMap, T objectToUpdate) {
+    public static ObjectMerger of(Class type) {
+        return new ObjectMerger(type);
+    }
+
+    public void mergeRequestBodyToGenericObject(Map<String, Object> objectMap, T objectToUpdate) {
         T newObject = objectMapper.convertValue(objectMap, type);
 
         objectMap.forEach((fieldProp, valueProp) -> {
@@ -76,13 +83,11 @@ public class ObjectMerger<T> {
 
             ReflectionUtils.setField(field, objectToUpdate, newValue);
         });
-
-        return objectToUpdate;
     }
 }
 ```
 
-You can see that I can instantiate this with any other class type (hence "generic") and the class will provide a method to map a `Map<String, Object>` to the object type provided. This is a solution to implement partial updates to an object via a PATCH HTTP request.
+You can see that I can instantiate this with any other class type (hence "generic") using `of` method and the class will provide a method to map a `Map<String, Object>` to the object type provided. This is Generics solution to implement partial updates to an object via a PATCH HTTP request.
 
 ```
 NOTE: I'm aware there are better solutions to this problem. =)
@@ -93,54 +98,25 @@ NOTE: I'm aware there are better solutions to this problem. =)
 This is the new implementation for the PATCH HTTP method of any Controller from now on (here, the Restaurant example):
 
 ```java
-// Injecting the correct objectMerger
-@Autowired
-private ObjectMerger<Restaurant> objectMerger;
-
-//The PATCH endpoint simplified
 @PatchMapping("/{id}")
-	public ResponseEntity<?> partialUpdate(@PathVariable Long id, @RequestBody Map<String, Object> restaurantMap) {
-		Restaurant restaurantToUpdate = restaurantCrudService.read(id);
+public ResponseEntity<?> partialUpdate(@PathVariable Long id, @RequestBody Map<String, Object> restaurantMap) {
+    Restaurant restaurantToUpdate = restaurantCrudService.read(id);
 
-		if (restaurantToUpdate == null) {
-			return ResponseEntity.notFound().build();
-		}
-
-		restaurantToUpdate = objectMerger.mergeRequestBodyToGenericObject(restaurantMap, restaurantToUpdate);
-
-		return update(id, restaurantToUpdate);
-	}
-```
-
-### The Spring Configuration
-
-I'm using Spring, as you may have noticed, so I configured a few Beans of ObjectMerger on a specific configuration class:
-
-```java
-@Configuration
-public class ObjectMergerConfig {
-
-    @Bean
-    public ObjectMerger<Restaurant> restaurantObjectMerger() {
-        return new ObjectMerger<>(Restaurant.class);
+    if (restaurantToUpdate == null) {
+        return ResponseEntity.notFound().build();
     }
 
-    @Bean
-    public ObjectMerger<Cuisine> cuisineObjectMerger() {
-        return new ObjectMerger<>(Cuisine.class);
-    }
+    ObjectMerger
+        .of(Restaurant.class)
+        .mergeRequestBodyToGenericObject(restaurantMap, restaurantToUpdate);
 
-    @Bean
-    public ObjectMerger<City> cityObjectMerger() {
-        return new ObjectMerger<>(City.class);
-    }
-
-    @Bean
-    public ObjectMerger<Province> provinceObjectMerger() {
-        return new ObjectMerger<>(Province.class);
-    }
+    return update(id, restaurantToUpdate);
 }
 ```
+
+### Fisrt version
+
+The first version of this post/implementation can be seen [here](https://github.com/brunodrugowick/brunodrugowick.github.io/blob/811e98395e14497e04def96c29cf8488717e7182/_posts/2019-12-11-first-attempt-generics-reflection.md).
 
 ### And that's it
 
