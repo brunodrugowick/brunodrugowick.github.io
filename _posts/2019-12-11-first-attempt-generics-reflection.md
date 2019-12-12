@@ -107,17 +107,17 @@ public ResponseEntity<?> partialUpdate(@PathVariable Long id, @RequestBody Map<S
 }
 ```
 
-### Wait... I was wrong!
+## Wait... I was wrong!
 
-## What I wanted to do was simply DRY.
+### What I wanted to do was simply DRY.
 
 `Don't Repeat Yourself`, i.e. a solution where I would not repeat myself for the PATCH HTTP requests (in this case). I thought Generics was the solution because... reasons! Well, I don't know exactly at this point. All I remember now is that I also had in mind that I didn't want to instantiate ojects with `new`.
 
 So, here it goes for historial purposes, the Generics implementation: [the one where I was thinking with my ass](https://github.com/brunodrugowick/algafood-api/commit/0d5b7bc25bc1a7c69d523c19c4a1abef10f862ce).
 
-## And I didn't even need configuration.
+### And I didn't even need configuration.
 
-```
+```java
 public static ObjectMerger of(Class type) {
     return new ObjectMerger(type);
 }
@@ -125,9 +125,9 @@ public static ObjectMerger of(Class type) {
 
 So I created a `of` method to return a new ObjectMerger: [the one where someone helped me to make a bit of sense](https://github.com/brunodrugowick/algafood-api/commit/940020631adab29a8c92707252e54c7df02af813).
 
-## And to avoid instantiation I could cache on a map.
+### And to avoid instantiation I could cache on a map.
 
-```
+```java
 public static ObjectMerger of(Class type) {
 
     if (!cacheEnabled) {
@@ -150,9 +150,9 @@ public static ObjectMerger of(Class type) {
 
 This ideia led to this implementation: [the one where I was almost there](https://github.com/brunodrugowick/algafood-api/commit/991c2ebe7e4ae4330b53291d9825c64ad3180aee).
 
-## Well, what am I caching anyway?
+### Well, what am I caching anyway?
 
-```
+```java
 public class ObjectMerger {
 
     public static void mergeRequestBodyToGenericObject(Map<String, Object> objectMap, Object objectToUpdate, Class type) {
@@ -173,7 +173,7 @@ public class ObjectMerger {
 
 I didn't need any properties on the class, it could be a helper class, no state, just function. So I made a dead simple static method: [the one where I felt like an idiot](https://github.com/brunodrugowick/algafood-api/commit/8c166780e172daa2e7fed84972c9012372334651).
 
-### And that's it
+## And that's it
 
 It's working, I learnt a lot and I'm very pleased with myself. Hahahahaha.
 
