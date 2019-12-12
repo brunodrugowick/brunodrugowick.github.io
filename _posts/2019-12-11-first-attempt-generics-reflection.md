@@ -5,7 +5,9 @@ showOnHome: false
 excerpt_separator: <!--more-->
 ---
 
-# My first attempt at Generics
+# My first attempt at Generics...
+
+... it turns out I didn't need it!
 
 It's been a while that I wanted to try something with Generics. The opportunity just hit me when an implementation with Reflection was shown to me. Those are two topics I want to make myself more comfortable with, so... ideal opportunity!
 
@@ -48,12 +50,6 @@ And I'd have to reimplement this method on all my controllers (for other entitie
 
 ## The Solution
 
-TL;DR: 
-
-- [the commit with the first solution](https://github.com/brunodrugowick/algafood-api/commit/0d5b7bc25bc1a7c69d523c19c4a1abef10f862ce).
-- [amendment to reduce configuration](https://github.com/brunodrugowick/algafood-api/commit/940020631adab29a8c92707252e54c7df02af813)
-- [adding a cache of ObjectMergers per model](https://github.com/brunodrugowick/algafood-api/commit/991c2ebe7e4ae4330b53291d9825c64ad3180aee). Not discussed in this post.
-
 ### The Generic Class
 
 This is the class that represents the code above but with Generics in mind:
@@ -90,10 +86,6 @@ public class ObjectMerger<T> {
 
 You can see that I can instantiate this with any other class type (hence "generic") using `of` method and the class will provide a method to map a `Map<String, Object>` to the object type provided. This is Generics solution to implement partial updates to an object via a PATCH HTTP request.
 
-```
-NOTE: I'm aware there are better solutions to this problem. =)
-```
-
 ### The new implementation for the PATCH HTTP method
 
 This is the new implementation for the PATCH HTTP method of any Controller from now on (here, the Restaurant example):
@@ -115,12 +107,29 @@ public ResponseEntity<?> partialUpdate(@PathVariable Long id, @RequestBody Map<S
 }
 ```
 
-### Fisrt version
+### Wait... I was wrong!
 
-The first version of this post/implementation can be seen [here](https://github.com/brunodrugowick/brunodrugowick.github.io/blob/811e98395e14497e04def96c29cf8488717e7182/_posts/2019-12-11-first-attempt-generics-reflection.md).
+## What I wanted to do was simply DRY.
+
+`Don't Repeat Yourself`, i.e. a solution where I would not repeat myself for the PATCH HTTP requests (in this case). I thought Generics was the solution because... reasons! Well, I don't know exactly at this point. All I remember now is that I also had in mind that I didn't want to instantiate ojects with `new`.
+
+So, here it goes for historial purposes, the Generics implementation: [the one where I was thinking with my ass](https://github.com/brunodrugowick/algafood-api/commit/0d5b7bc25bc1a7c69d523c19c4a1abef10f862ce).
+
+## And I didn't even need configuration.
+
+So I created a `of` method to return a new ObjectMerger: [the one where someone helped me to make a bit of sense](https://github.com/brunodrugowick/algafood-api/commit/940020631adab29a8c92707252e54c7df02af813).
+
+## And to avoid instantiation I could cache on a map.
+
+This ideia led to this implementation: [the one where I was almost there](https://github.com/brunodrugowick/algafood-api/commit/991c2ebe7e4ae4330b53291d9825c64ad3180aee).
+
+## Well, what am I caching anyway?
+
+I didn't need any properties on the class, it could be a helper class, no state, just function. So I made a dead simple static method: [the one where I felt like an idiot](https://github.com/brunodrugowick/algafood-api/commit/8c166780e172daa2e7fed84972c9012372334651).
 
 ### And that's it
 
-It's working fine and I'm very pleased with myself. Hahahahaha.
+It's working, I learnt a lot and I'm very pleased with myself. Hahahahaha.
 
+You can see the history of this post [here](https://github.com/brunodrugowick/brunodrugowick.github.io/commits/master/_posts/2019-12-11-first-attempt-generics-reflection.md).
 You can test the API [here](https://algafoodapi.herokuapp.com/).
