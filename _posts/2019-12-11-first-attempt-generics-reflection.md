@@ -117,13 +117,59 @@ So, here it goes for historial purposes, the Generics implementation: [the one w
 
 ## And I didn't even need configuration.
 
+```
+public static ObjectMerger of(Class type) {
+    return new ObjectMerger(type);
+}
+```
+
 So I created a `of` method to return a new ObjectMerger: [the one where someone helped me to make a bit of sense](https://github.com/brunodrugowick/algafood-api/commit/940020631adab29a8c92707252e54c7df02af813).
 
 ## And to avoid instantiation I could cache on a map.
 
+```
+public static ObjectMerger of(Class type) {
+
+    if (!cacheEnabled) {
+        // Cache is not enabled. A new instance is always created.
+        return new ObjectMerger(type);
+    }
+
+    if (!objectMergerCache.containsKey(type)) {
+        ObjectMerger objectMerger = new ObjectMerger(type);
+        objectMergerCache.put(type, objectMerger);
+        // Cache enabled. Instance created (first request).
+        return objectMerger;
+    }
+
+    // Cache enabled. Returning existing instance.
+    return objectMergerCache.get(type);
+}
+
+```
+
 This ideia led to this implementation: [the one where I was almost there](https://github.com/brunodrugowick/algafood-api/commit/991c2ebe7e4ae4330b53291d9825c64ad3180aee).
 
 ## Well, what am I caching anyway?
+
+```
+public class ObjectMerger {
+
+    public static void mergeRequestBodyToGenericObject(Map<String, Object> objectMap, Object objectToUpdate, Class type) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Object newObject = objectMapper.convertValue(objectMap, type);
+
+        objectMap.forEach((fieldProp, valueProp) -> {
+            Field field = ReflectionUtils.findField(type, fieldProp);
+            field.setAccessible(true);
+
+            Object newValue = ReflectionUtils.getField(field, newObject);
+
+            ReflectionUtils.setField(field, objectToUpdate, newValue);
+        });
+    }
+}
+```
 
 I didn't need any properties on the class, it could be a helper class, no state, just function. So I made a dead simple static method: [the one where I felt like an idiot](https://github.com/brunodrugowick/algafood-api/commit/8c166780e172daa2e7fed84972c9012372334651).
 
