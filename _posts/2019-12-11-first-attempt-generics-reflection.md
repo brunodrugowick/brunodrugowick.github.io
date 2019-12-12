@@ -52,6 +52,7 @@ TL;DR:
 
 - [the commit with the first solution](https://github.com/brunodrugowick/algafood-api/commit/0d5b7bc25bc1a7c69d523c19c4a1abef10f862ce).
 - [amendment to reduce configuration](https://github.com/brunodrugowick/algafood-api/commit/940020631adab29a8c92707252e54c7df02af813)
+- [adding a cache of ObjectMergers per model](https://github.com/brunodrugowick/algafood-api/commit/991c2ebe7e4ae4330b53291d9825c64ad3180aee). Not discussed in this post.
 
 ### The Generic Class
 
