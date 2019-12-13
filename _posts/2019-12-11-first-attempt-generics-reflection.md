@@ -179,3 +179,8 @@ It's working, I learnt a lot and I'm very pleased with myself. Hahahahaha.
 
 You can see the history of this post [here](https://github.com/brunodrugowick/brunodrugowick.github.io/commits/master/_posts/2019-12-11-first-attempt-generics-reflection.md).
 You can test the API [here](https://algafoodapi.herokuapp.com/).
+
+# Comments
+
+<div id="commento"></div>
+<script src="https://cdn.commento.io/js/commento.js"></script>
