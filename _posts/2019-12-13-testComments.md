@@ -23,7 +23,7 @@ Yeah, this is just a page break, below are the comments... aren't they?
 <script>
 
 var disqus_config = function () {
-this.page.url = '{{ page.id }}';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.url = 'https://drugowick.dev' + '{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 

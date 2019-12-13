@@ -188,7 +188,7 @@ You can test the API [here](https://algafoodapi.herokuapp.com/).
 <script>
 
 var disqus_config = function () {
-this.page.url = '{{ page.id }}';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.url = 'https://drugowick.dev' + '{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
