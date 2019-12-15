@@ -3,6 +3,7 @@ layout: default
 title: The SHAME ON ME fix
 showOnHome: true
 excerpt_separator: <!--more-->
+comments: true
 ---
 
 # The SHAME ON ME fix
@@ -78,3 +79,24 @@ this.sleep(1000);
 You can actually see the code on [this commit](https://github.com/brunodrugowick/omnistack-quick-start-frontend/commit/c1e92b1834afb63299adb33265f9ef6164eb9b98) and, of course, contribute, since it's a open source project.
 
 Shame on me, I know. `=|`
+
+# Comments
+
+{% if page.comments %} 
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://drugowick.dev' + '{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://drugowick.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
