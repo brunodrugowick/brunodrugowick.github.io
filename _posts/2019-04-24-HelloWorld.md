@@ -12,6 +12,8 @@ I've been writing for several years now, on several platforms. But never in engl
 
 That's the objective of this little tool, other than hosting my curriculum.
 
+<!--more-->
+
 # Comments
 
 {% if page.comments %} 
