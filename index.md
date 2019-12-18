@@ -6,7 +6,7 @@ buildUrl: index.html
 ##### {{ post.date | date: "%A - %Y-%m-%d" }}
 {{ post.excerpt }} 
 
-[Continue reading...]({{ post.url }})
+<a href="{{ post.devToUrl }}" target="_blank">Continue reading at dev.to...</a>
 
 ---
 {% endfor %}
