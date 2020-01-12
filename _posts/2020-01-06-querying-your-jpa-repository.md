@@ -19,3 +19,5 @@ In this series of posts I'll show you several methods to query your `Java` `JPA`
 - Spring Data JPA Repository: a Java interface/class annotated with `@Repository` from `org.springframework.stereotype` package.
 
 <!--more-->
+
+<a href="https://dev.to/brunodrugowick/querying-your-spring-data-jpa-repository-introduction-4ani" target="_blank">Continue reading at dev.to...</a>

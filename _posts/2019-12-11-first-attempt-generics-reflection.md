@@ -15,6 +15,8 @@ It's been a while that I wanted to try something with Generics. The opportunity 
 
 <!--more-->
 
+<a href="https://dev.to/brunodrugowick/my-first-attempt-at-generics-976" target="_blank">Continue reading at dev.to...</a>
+
 ## The Opportunity
 
 I was implementing a PATCH HTTP request on a controller for an entity called Restaurant as part of a REST API course I'm taking. The implementation that the instructor came up with was something like this (using Reflection):

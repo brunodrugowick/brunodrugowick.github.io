@@ -13,6 +13,8 @@ GitHub Pages can serve static content for free using your GitHub account. I use 
 
 <!--more-->
 
+<a href="https://dev.to/brunodrugowick/how-to-use-github-pages-j7d" target="_blank">Continue reading at dev.to...</a>
+
 ## Quick Start
 
 For free GitHub accounts, create a public repository called `<username>.github.io`. The `<username>` must be your GitHub username.

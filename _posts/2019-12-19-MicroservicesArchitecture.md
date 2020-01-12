@@ -13,3 +13,5 @@ This post presents the basic architecture of an online flower shop in a microser
 I do provide a working example of a microservices application based on [Spring Cloud](https://spring.io/projects/spring-cloud) project. I also provide a basic explanation of the components' responsibilities and how they achieve that, which I believe is a good way to understand the microservices architecture.
 
 <!--more-->
+
+<a href="https://dev.to/brunodrugowick/project-overview-the-basic-microservices-architecture-with-spring-cloud-2e8e" target="_blank">Continue reading at dev.to...</a>

@@ -22,6 +22,8 @@ So... assuming:
 
 <!--more-->
 
+<a href="https://dev.to/brunodrugowick/github-pages-and-google-domains-together-5ded" target="_blank">Continue reading at dev.to...</a>
+
 1. On your GitHub Pages repository settings (`https://github.com/<your-username>/<your-username>.github.io/settings`) in the `Custom domain` field, put your custom domain including the **www** in the beginning, like so:
     ![GitHub Settings Custom Domain](/assets/img/post_2019-05-13/github-settings-customdomain.png)
 

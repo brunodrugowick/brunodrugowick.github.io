@@ -15,6 +15,8 @@ You can follow this procedure with a few modifications for GitLab and Bitbucket.
 
 <!--more-->
 
+<a href="https://dev.to/brunodrugowick/adding-ssh-key-to-github-fem" target="_blank">Continue reading at dev.to...</a>
+
 ## Generating a SSH key
 
 ### Check the existence of a key:

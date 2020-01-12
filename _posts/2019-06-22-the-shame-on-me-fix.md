@@ -15,6 +15,8 @@ The function that uploads the post to the server, after doing so, redirects the 
 
 <!--more-->
 
+<a href="https://dev.to/brunodrugowick/the-shame-on-me-fix-2aij" target="_blank">Continue reading at dev.to...</a>
+
 ```javascript
 handleSubmit = async e => {
     // Prevents the browser from doing whatever after submiting a form
