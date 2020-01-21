@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "SComplete API in 5 minutes with Spring Data REST - AQAP Series"
+title: "Complete API in 5 minutes with Spring Data REST - AQAP Series"
 showOnHome: false
 excerpt_separator: <!--more-->
 devToUrl: https://dev.to/brunodrugowick/complete-api-in-5-minutes-with-spring-data-rest-aqap-series-1ie8
