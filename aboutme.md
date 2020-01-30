@@ -12,7 +12,9 @@ buildUrl: aboutme.html
 
 - **`June 2016 - July 2018`** Manager. This was a big change in my career. From this point on I started working with more traditional development tools and languages. I was Manager of a Business Unit, taking part on the staff meetings and dealing with the company's strategy. During this period some of the roles I played included Scrum Master, Product Owner and Team Leader.
 
-- **`July 2018 - Present`** Technology Coordinator. Now fully managing the development and support of a product, I still act as a Team Leader but also work on the architecture of the application, design and code reviews. Some of the technologies I work with (actually since 2016) are `Spring Framework`, `Thymeleaf`, `AngularJS`, `MongoDB`, `HSQLDB`, `Git`, `GitLab`...
+- **`July 2018 - January 2020`** Technology Coordinator. At this point I was fully managing the ownership, development and support of a product, I was still a Team Leader but also worked on the architecture of the application, design and code reviews. Some of the technologies I worked with (actually since 2016) were `Spring Framework`, `Thymeleaf`, `AngularJS`, `MongoDB`, `HSQLDB`, `Git`, `GitLab`...
+
+- **`January 2020 - Present`** Chapter Leader (The Dev Chapter). Right now all my abilities are focused on development. My team is responsible for everything related to development (back/front-end, mobile), regardless of being a internal component, a product or a client solution. A broader spectrum of technologies are now part of my life.
 
 Well, that's my experience `in a nutshell`, but every experience mentioned above, even before 2010, was valuable and made me into the professional I'm today.
 
