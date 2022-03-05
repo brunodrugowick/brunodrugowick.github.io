@@ -1,3 +1,5 @@
+> _NOTE_: I'm managing my personal website in [https://github.com/brunodrugowick/drugowick.dev](https://github.com/brunodrugowick/drugowick.dev).
+
 The latest version of this site can be seen at [https://brunodrugowick.github.io](https://brunodrugowick.github.io).
 
 # GitHub Pages
