@@ -1,6 +1,6 @@
 #!/bin/bash
 
-POSTS_FILE=../_data/devPosts.json
+POSTS_FILE=./_data/devPosts.json
 
 # Clear the posts file
 echo -n "" >$POSTS_FILE
