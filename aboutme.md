@@ -2,23 +2,18 @@
 buildUrl: aboutme.html
 ---
 
-# My Experience In a Nutshell
+# About me
 
-- **`Up to 2010`** Worked to pay the bills. Mostly IT support, some PHP.
+I used to have my work experience on this page, but that's limiting. You can always go to my Linkedin (link below) for that.
 
-- **`2010 - March 2015`** Developer in the ITSM industry. Worked with `BMC Remedy ITSM` suite and `BMC Atrium Orchestrator`, mostly. My roles ranged from Developer to Technical Leader towards the end of this period.
+At the same time, if I start to talk about my whole self here, that's also going to be limiting. Yes, I'm confused like that! That is my motto, actually: _Constantly confused_. I have a t-shirt with that written in a fancy font.
 
-- **`March 2015 - June 2016`** Team Leader. This only added to my previous roles, acting as a promotion. My responsibilities were to develop and `coordinate a team` of around 10 people. I also took part in the company's `mentoring program` as a mentor for other professionals. 
+To really talk about myself I'd have to have a personal blog or something, so I can talk about myself while I, myself, change. And here, the idea is to talk about some tech stuff that I like to do.
 
-- **`June 2016 - July 2018`** Manager. This was a big change in my career. From this point on I started working with more traditional development tools and languages. I was Manager of a Business Unit, taking part on the staff meetings and dealing with the company's strategy. During this period some of the roles I played included Scrum Master, Product Owner and Team Leader.
+Well, I started this text trying not to talk about myself, but that and the three paragraphs above end up saying a lot about myself, I think.
 
-- **`July 2018 - January 2020`** Technology Coordinator. At this point I was fully managing the ownership, development and support of a product, I was still a Team Leader but also worked on the architecture of the application, design and code reviews. Some of the technologies I worked with (actually since 2016) were `Spring Framework`, `Thymeleaf`, `AngularJS`, `MongoDB`, `HSQLDB`, `Git`, `GitLab`...
+Yeah, that's me... :)
 
-- **`January 2020 - Present`** Chapter Leader (The Dev Chapter). Right now all my abilities are focused on development. My team is responsible for everything related to development (back/front-end, mobile), regardless of being a internal component, a product or a client solution. A broader spectrum of technologies are now part of my life.
-
-Well, that's my experience `in a nutshell` and every experience mentioned above, even before 2010, was rich and valuable and made me into the professional I'm today.
-
-If you want to know more, I really enjoy a good conversation! Use the links below to contact me.
 
 ---
 
@@ -31,4 +26,4 @@ If you want to know more, I really enjoy a good conversation! Use the links belo
 
 # That's me
 
-![That's me!](assets/img/Drugo_2019.jpg)
+![That's me!](assets/img/Eu_2021.jpg)

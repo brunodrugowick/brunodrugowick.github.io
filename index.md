@@ -2,11 +2,24 @@
 buildUrl: index.html
 ---
 
-{% for post in site.posts %}
-##### <a href="{{ post.url }}"><small>.</small></a> {{ post.date | date: "%A - %Y-%m-%d" }}
-{{ post.excerpt }} 
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+</head>
 
-<a href="{{ post.devToUrl }}" target="_blank">Continue reading at dev.to...</a>
-
----
-{% endfor %}
+<div>
+    {% for devPost in site.data.devPosts %} 
+    <div class="card">
+        <a href="{{ devPost.url }}" target="_blank">
+            <img src="{{ devPost.cover_image }}" style="width: 100%">
+        </a>
+        <a href="{{ devPost.url }}" target="_blank">
+            <div class="container">
+                <h3>{{ devPost.title }}</h3>
+                <h6>{{ devPost.readable_publish_date }}</h6>
+                <p>{{ devPost.description }}</p>
+            </div>
+        </a>
+    </div>
+    <br>
+    {% endfor %}
+</div>
