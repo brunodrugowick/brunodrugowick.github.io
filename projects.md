@@ -1,13 +1,15 @@
----
-buildUrl: projects.html
----
+# Bruno Drugowick
 
-# Active Projects
+[BLOG](/index.md) | [PROJECTS](/projects.md) | [ABOUT ME](/aboutme.md)
 
-Those are the most relevant projects I'm working on. You can find more at my [GitHub](https://github.com/brunodrugowick).
+{% for project in site.data.projects %}
 
-All projects are integrated with GitHub and are automatically built when merging or commiting (let's not overcomplicate) to master. When relevant I use GitFlow to manage the repository. For example, GraphQL has been added to the development branch/build on [at-the-tsbyss-leaderboard](https://github.com/brunodrugowick/at-the-tsbyss-leaderboard/tree/develop).
+## {{ project.name }}
+            
+{{ project.description }}
+            
+###### [GITHUB]({{ project.github }}) {% if project.link != null %} &nbsp; &nbsp; [APP]({{ project.link }}) {% endif %}
 
-| Project       | Description       | Links     |
-| ------------- | ----------------- | ------------- | {% for project in site.data.projects %}
-| {{ project.name }}  | {{ project.description }} | [GitHub]({{ project.github }}) <br> {% if project.link != null %} <a href="{{ project.link }}" target="_blank">App <img src="assets/img/external-link-altstyle=solid.svg" width="15px"/></a> {% endif %} | {% endfor %}
+{% endfor %}
+
+These are some things I've been working on. You can always take a look at my <a href="https://github.com/brunodrugowick?tab=repositories" target="_blank">GitHub Repositories</a> to see more.

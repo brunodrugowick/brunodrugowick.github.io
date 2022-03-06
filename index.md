@@ -1,12 +1,12 @@
----
-buildUrl: index.html
----
+# Bruno Drugowick
 
-{% for post in site.posts %}
-##### <a href="{{ post.url }}"><small>.</small></a> {{ post.date | date: "%A - %Y-%m-%d" }}
-{{ post.excerpt }} 
+[BLOG](/index.md) | [PROJECTS](/projects.md) | [ABOUT ME](/aboutme.md)
 
-<a href="{{ post.devToUrl }}" target="_blank">Continue reading at dev.to...</a>
+{% for devPost in site.data.devPosts %}
+## {{ devPost.title }}
 
----
+{{ devPost.readable_publish_date }}
+
+{{ devPost.description }} [continue to read]({{ devPost.url }})
+
 {% endfor %}

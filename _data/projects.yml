@@ -1,18 +1,13 @@
-- name: WIP AlgafoodAPI
-  description: A project based on a course from Algaworks. Algafood API is a REST API for a food delivery solution.
-  github: https://github.com/brunodrugowick/algafood-api
-  link: https://algafoodapi.herokuapp.com/
+- name: Pop!_OS Setup
+  description: A script to setup my machine after OS installation
+  github: https://github.com/brunodrugowick/pop-os-setup
+  link:
 
-- name: WIP Drugo Investments
-  description: An app to manage my investments. Developed on Spring Boot (Spring Security, Thymeleaf, JPA), Bootstrap and I plan to use VueJS + Axios at some point.
-  github: https://github.com/brunodrugowick/investments-app
-  link: https://drugo-investments-app.herokuapp.com/
+- name: BP Diary
+  description: Simple app to register my blood pressure measurements and show it to my doctor.
+  github: https://github.com/brunodrugowick/timeseries-poc
+  link: https://blood-pressure-timeseries.herokuapp.com/
 
-- name: WIP Drugo Petclinic
-  description: An implementation of the well-known Spring Pet Clinic based on John Thompson's Udemy course.
-  github: https://github.com/brunodrugowick/drugo-petclinic
-  link: https://drugo-petclinic.herokuapp.com/
-  
 - name: Leaderboard API for at-the-tsbyss game
   description: A NodeJS (+ MongoDB) API to store the scores for the at-the-tsbyss game.
   github: https://github.com/brunodrugowick/at-the-tsbyss-leaderboard
@@ -23,21 +18,6 @@
   github: https://github.com/brunodrugowick/at-the-tsbyss-leaderboard-springboot
   link: https://drugo-spring-boot-hal-api.herokuapp.com/
 
-- name: Tindev
-  description: Project from "Semana Omnistack 8" with some of my own decisions. Backend + Frontend.
-  github: https://github.com/brunodrugowick/omnistack-tindev-backend
-  link: https://omnistack-tindev.herokuapp.com/
-
-- name: Instagram Clone
-  description: A very cool and addictive 2-week project that aims to mimic Instagram Feed with Like and Upload features using NodeJS as backend, React on the frontend and React Native on a mobile app. It uses websockets, which is nice! I added some features like comments, a red heart when you click like and made some of my own decisions when coding.
-  github: https://github.com/brunodrugowick/omnistack-quick-start-frontend
-  link: https://omnistack-quick-start-frontend.herokuapp.com/
-
-- name: Find PC Parts
-  description: A front end for a friend's app to learn more about Angular.
-  github: https://github.com/brunodrugowick/find-pc-parts-angular
-  link: https://upbeat-kirch-9dac54.netlify.com/
-
 - name: Boilerplate Spring Vue.js App
   description: A Spring Boot application with Thymeleaf handling the pages to be provided and Vue.js with Axios requesting additional data.
   github: https://github.com/brunodrugowick/springboot-vue-axios-boilerplate
@@ -47,7 +27,3 @@
   description: A home page and a programming blog.
   github: https://github.com/brunodrugowick/brunodrugowick.github.io
   link: /
-
-- name: Programming Studies
-  description: A study guide to improve my programming skills.
-  github: https://github.com/brunodrugowick/ProgrammingStudies
