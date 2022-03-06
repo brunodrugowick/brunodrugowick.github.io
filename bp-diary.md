@@ -1,6 +1,3 @@
----
-buildUrl: bp-diary.html
----
 # Redirecting...
 
 This page is going to redirect you to [https://blood-pressure-timeseries.herokuapp.com/](https://blood-pressure-timeseries.herokuapp.com/).

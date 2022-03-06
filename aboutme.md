@@ -1,8 +1,8 @@
----
-buildUrl: aboutme.html
----
+# Bruno Drugowick
 
-# About me
+[BLOG](/index.md) | [PROJECTS](/projects.md) | [ABOUT ME](/aboutme.md)
+
+## About me
 
 I used to have my work experience on this page, but that's limiting. You can always go to my Linkedin (link below) for that.
 
@@ -14,15 +14,10 @@ Well, I started this text trying not to talk about myself, but that and the thre
 
 Yeah, that's me... :)
 
-
----
-
-# Contact
+## Contact
 
 {% for link in site.data.links %} 
 - [{{ link.text }}]({{ link.url }}) {% endfor %}
-
----
 
 # That's me
 
