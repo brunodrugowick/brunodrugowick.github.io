@@ -20,5 +20,5 @@ jobs:
         run: |
           git config --global user.name 'Bruno Drugowick'
           git config --global user.email 'brunodrugowick@users.noreply.github.com'
-          git commit -am "Automated report"
+          git commit -am "Update articles list"
           git push
