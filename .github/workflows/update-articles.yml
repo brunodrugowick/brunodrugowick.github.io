@@ -15,6 +15,10 @@ jobs:
       - name: Run script to get articles from dev.to
         run: |
           ./scripts/post_files_from_GET_json.sh
-          git add .
-          git commit -m "Updating articles"
+      
+      - name: Commit to the repo
+        run: |
+          git config --global user.name 'Bruno Drugowick'
+          git config --global user.email 'brunodrugowick@users.noreply.github.com'
+          git commit -am "Automated report"
           git push
