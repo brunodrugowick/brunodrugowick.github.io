@@ -9,3 +9,4 @@ POSTS_JSON=$(curl https://dev.to/api/articles?username=brunodrugowick&?per_page=
 #echo "$POSTS_JSON"
 
 echo "$POSTS_JSON" | jq >>$POSTS_FILE
+date >last_updated_date
