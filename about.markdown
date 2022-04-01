@@ -1,8 +1,8 @@
-# Bruno Drugowick
-
-[BLOG](/index.md) | [PROJECTS](/projects.md) | [ABOUT ME](/aboutme.md)
-
-## About me
+---
+layout: page
+title: About
+permalink: /about/
+---
 
 I used to have my work experience on this page, but that's limiting. You can always go to my Linkedin (link below) for that.
 
@@ -16,9 +16,13 @@ Yeah, that's me... :)
 
 ## Contact
 
-{% for link in site.data.links %} 
+{% for link in site.data.links %}
 - [{{ link.text }}]({{ link.url }}) {% endfor %}
 
-# That's me
+## Versions of Me
 
-![That's me!](assets/img/Eu_2021.jpg)
+![2022](/img/Eu_2022.jpg)
+
+![2021](/img/Eu_2021.jpg)
+
+![2019](/img/Eu_2019.jpg)
