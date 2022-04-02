@@ -2,10 +2,31 @@
 layout: post
 title:  "GitHub Pages and Google Domains together"
 date:   2019-12-18T18:41:17Z
-categories: 
 ---
 
-> <div class=card><div class=container><h4><b><a href="https://dev.to/brunodrugowick/github-pages-and-google-domains-together-5ded">You'll have a better experience reading in DEV...</a></b></h4><i><p>However, if you want to know more about the project to mirror my posts from DEV here (and why), go ahead and <a href="https://dev.to/brunodrugowick/github-pages-and-google-domains-together-5ded">read more</a>.</p><p>You can continue to read here too, it's up to you...</p></i></div></div>
+<style type="text/css" media="screen">
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .container {
+    padding: 2px 16px;
+  }
+</style>
+
+<code>[github, googledomains]</code>
+<div class=card>
+	  <div class=container>
+	    <h4><b><br>You'll have a better experience reading in DEV</b></h4>
+	    <p><a href="https://dev.to/brunodrugowick/github-pages-and-google-domains-together-5ded" target="_blank">Click here to continue reading this post there >></a></p>
+	    <p>However, if you want to know more about the project to mirror my posts from DEV here (and why), go ahead and <a href="https://dev.to/brunodrugowick/github-pages-and-google-domains-together-5ded" target="_blank">read more</a>.</p>
+	    <p>You can continue to read here too, it's up to you... =]</p>
+	  </div>
+	</div><br>
 <p>Oh, that annoyed me more than it should. Yes, it's quite easy to make your custom domain point to your GitHub Pages project, but from the confusing GitHub documentation (too much freaking information) to the annoying first-page Google results, took me a while for everything to work properly.</p>
 
 <p>Now I have my GitHub Pages project working fine over HTTPS with my custom domain on <a href="https://drugowick.dev">https://drugowick.dev</a> or <a href="https://www.drugowick.dev">https://www.drugowick.dev</a>.</p>

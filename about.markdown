@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about
 ---
 
 I used to have my work experience on this page, but that's limiting. You can always go to my Linkedin (link below) for that.

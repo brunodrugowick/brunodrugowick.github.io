@@ -2,24 +2,45 @@
 layout: post
 title:  "Project Overview: the Basic Microservices Architecture with Spring Cloud"
 date:   2019-12-19T05:03:49Z
-categories: 
 ---
 
-> <div class=card><div class=container><h4><b><a href="https://dev.to/brunodrugowick/project-overview-the-basic-microservices-architecture-with-spring-cloud-2e8e">You'll have a better experience reading in DEV...</a></b></h4><i><p>However, if you want to know more about the project to mirror my posts from DEV here (and why), go ahead and <a href="https://dev.to/brunodrugowick/project-overview-the-basic-microservices-architecture-with-spring-cloud-2e8e">read more</a>.</p><p>You can continue to read here too, it's up to you...</p></i></div></div>
+<style type="text/css" media="screen">
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .container {
+    padding: 2px 16px;
+  }
+</style>
+
+<code>[microservices, java, spring, cloud]</code>
+<div class=card>
+	  <div class=container>
+	    <h4><b><br>You'll have a better experience reading in DEV</b></h4>
+	    <p><a href="https://dev.to/brunodrugowick/project-overview-the-basic-microservices-architecture-with-spring-cloud-2e8e" target="_blank">Click here to continue reading this post there >></a></p>
+	    <p>However, if you want to know more about the project to mirror my posts from DEV here (and why), go ahead and <a href="https://dev.to/brunodrugowick/project-overview-the-basic-microservices-architecture-with-spring-cloud-2e8e" target="_blank">read more</a>.</p>
+	    <p>You can continue to read here too, it's up to you... =]</p>
+	  </div>
+	</div><br>
 <p>This post presents the basic architecture of an online flower shop in a microservices architecture. I have no intention to provide detailed information on each component on this post.</p>
 
 <p>I do provide a working example of a microservices application based on <a href="https://spring.io/projects/spring-cloud">Spring Cloud</a> project. I also provide a basic explanation of the components' responsibilities and how they achieve that, which I believe is a good way to understand the microservices architecture.</p>
 
 <h2>
- <a name="components" href="#components">
- </a>
- Components
+  <a name="components" href="#components">
+  </a>
+  Components
 </h2>
 
 <h3>
- <a name="store-front" href="#store-front">
- </a>
- Store Front
+  <a name="store-front" href="#store-front">
+  </a>
+  Store Front
 </h3>
 
 <p><code>storefront</code> folder on the repository.</p>
@@ -44,9 +65,9 @@ categories:
 </ul>
 
 <h3>
- <a name="supplier" href="#supplier">
- </a>
- Supplier
+  <a name="supplier" href="#supplier">
+  </a>
+  Supplier
 </h3>
 
 <p><code>supplier</code> folder on the repository.</p>
@@ -58,9 +79,9 @@ categories:
 </ul>
 
 <h3>
- <a name="carrier" href="#carrier">
- </a>
- Carrier
+  <a name="carrier" href="#carrier">
+  </a>
+  Carrier
 </h3>
 
 <p><code>carrier</code> folder on the repository.</p>
@@ -72,9 +93,9 @@ categories:
 </ul>
 
 <h3>
- <a name="authentication-server" href="#authentication-server">
- </a>
- Authentication Server
+  <a name="authentication-server" href="#authentication-server">
+  </a>
+  Authentication Server
 </h3>
 
 <p><code>auth-service</code> folder on the repository.</p>
@@ -86,9 +107,9 @@ categories:
 </ul>
 
 <h3>
- <a name="api-gateway" href="#api-gateway">
- </a>
- API Gateway
+  <a name="api-gateway" href="#api-gateway">
+  </a>
+  API Gateway
 </h3>
 
 <p><code>zuul-api-gateway</code> folder on the repository.</p>
@@ -101,9 +122,9 @@ categories:
 </ul>
 
 <h3>
- <a name="eureka-server" href="#eureka-server">
- </a>
- Eureka server
+  <a name="eureka-server" href="#eureka-server">
+  </a>
+  Eureka server
 </h3>
 
 <p><code>eureka-server</code> folder.</p>
@@ -116,32 +137,32 @@ categories:
 </ul>
 
 <h3>
- <a name="config-server" href="#config-server">
- </a>
- Config Server
+  <a name="config-server" href="#config-server">
+  </a>
+  Config Server
 </h3>
 
 <p><code>config-server</code> folder.</p>
 
 <ul>
-<li>Provides configuration to the microservices. The <code>config-repo</code> folder is used to store the configuration files.</li>
+<li>Provides configuration to the microservices.  The <code>config-repo</code> folder is used to store the configuration files.</li>
 </ul>
 
 <h3>
- <a name="other-stuff" href="#other-stuff">
- </a>
- Other Stuff
+  <a name="other-stuff" href="#other-stuff">
+  </a>
+  Other Stuff
 </h3>
 
 <ul>
-<li>I've configured to log to papertrail (a log aggregator as a service) and used Spring Cloud Sleuth to add a traceId to every user request, being able to trace the request across microservices.</li>
+<li>I've configured to log to papertrail (a log aggregator as a service) and used Spring Cloud Sleuth to add a traceId to every user request, being able to trace  the request across microservices.</li>
 <li>The logback.xml on each "domain" microservice does the magic. This will stop working after a while, so provide your own configuration for logback...</li>
 </ul>
 
 <h2>
- <a name="handson" href="#handson">
- </a>
- Hands-on!
+  <a name="handson" href="#handson">
+  </a>
+  Hands-on!
 </h2>
 
 <ol>
@@ -159,9 +180,9 @@ categories:
 </ol>
 
 <h2>
- <a name="test-stuff" href="#test-stuff">
- </a>
- Test Stuff
+  <a name="test-stuff" href="#test-stuff">
+  </a>
+  Test Stuff
 </h2>
 
 <p>There's a <a href="https://github.com/brunodrugowick/microservices-flowershop/blob/master/README/cartRequests.jmx">cartRequests.jmx</a> to be imported on <a href="https://jmeter.apache.org/">JMeter</a> and test Hystrix. Ask me if you want to know more about it.</p>
@@ -169,9 +190,9 @@ categories:
 <p>There's also a <a href="https://github.com/brunodrugowick/microservices-flowershop/blob/master/README/insomnia_requests.json">insomnia_requests.json</a> file to be imported on <a href="https://insomnia.rest/download/">Insomnia</a> and test all endpoints.</p>
 
 <h2>
- <a name="notes" href="#notes">
- </a>
- Notes
+  <a name="notes" href="#notes">
+  </a>
+  Notes
 </h2>
 
 <ul>

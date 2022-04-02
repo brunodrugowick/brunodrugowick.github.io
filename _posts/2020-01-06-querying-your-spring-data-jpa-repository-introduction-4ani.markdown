@@ -2,16 +2,37 @@
 layout: post
 title:  "Querying your Spring Data JPA Repository - Introduction"
 date:   2020-01-06T23:14:36Z
-categories: 
 ---
 
-> <div class=card><div class=container><h4><b><a href="https://dev.to/brunodrugowick/querying-your-spring-data-jpa-repository-introduction-4ani">You'll have a better experience reading in DEV...</a></b></h4><i><p>However, if you want to know more about the project to mirror my posts from DEV here (and why), go ahead and <a href="https://dev.to/brunodrugowick/querying-your-spring-data-jpa-repository-introduction-4ani">read more</a>.</p><p>You can continue to read here too, it's up to you...</p></i></div></div>
+<style type="text/css" media="screen">
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .container {
+    padding: 2px 16px;
+  }
+</style>
+
+<code>[java, spring, jpa, repository]</code>
+<div class=card>
+	  <div class=container>
+	    <h4><b><br>You'll have a better experience reading in DEV</b></h4>
+	    <p><a href="https://dev.to/brunodrugowick/querying-your-spring-data-jpa-repository-introduction-4ani" target="_blank">Click here to continue reading this post there >></a></p>
+	    <p>However, if you want to know more about the project to mirror my posts from DEV here (and why), go ahead and <a href="https://dev.to/brunodrugowick/querying-your-spring-data-jpa-repository-introduction-4ani" target="_blank">read more</a>.</p>
+	    <p>You can continue to read here too, it's up to you... =]</p>
+	  </div>
+	</div><br>
 <p>In this series of posts I'll show you several methods to query your <code>Java</code> <code>JPA</code> <code>repositories</code> using <code>Spring Data JPA</code>. Throwing in some <code>Spring Boot</code> and <code>JPQL</code> and you have <em>too many words</em>!</p>
 
 <h2>
- <a name="so-what-do-you-need-to-know" href="#so-what-do-you-need-to-know">
- </a>
- So... what do you need to know?
+  <a name="so-what-do-you-need-to-know" href="#so-what-do-you-need-to-know">
+  </a>
+  So... what do you need to know?
 </h2>
 
 <ul>
@@ -40,9 +61,9 @@ categories:
 <p>Otherwise, you may continue on this awesome series of posts! =P</p>
 
 <h2>
- <a name="content" href="#content">
- </a>
- Content
+  <a name="content" href="#content">
+  </a>
+  Content
 </h2>
 
 <p>I'm going to cover 8 methods to query your data using Spring Data JPA Repositories. I'll develop <a href="https://github.com/brunodrugowick/jpa-queries-blog-post">an app for this series of posts</a> so you can follow along.</p>
@@ -50,129 +71,129 @@ categories:
 <p>In the mean time, this post links to another GitHub repository.</p>
 
 <h3>
- <a name="1-query-methods" href="#1-query-methods">
- </a>
- 1. Query Methods
+  <a name="1-query-methods" href="#1-query-methods">
+  </a>
+  1. Query Methods
 </h3>
 
 <p>Awesome Spring Data JPA implementation!</p>
 
 
 <div class="ltag__link">
- <a href="/brunodrugowick" class="ltag__link__link">
- <div class="ltag__link__pic">
- <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
- </div>
- </a>
- <a href="/brunodrugowick/spring-data-jpa-query-methods-l43" class="ltag__link__link">
- <div class="ltag__link__content">
- <h2>Spring Data JPA Query Methods</h2>
- <h3>Bruno Drugowick ・ Jan 15 '20 ・ 4 min read</h3>
- <div class="ltag__link__taglist">
- <span class="ltag__link__tag">#java</span>
- <span class="ltag__link__tag">#spring</span>
- <span class="ltag__link__tag">#jpa</span>
- <span class="ltag__link__tag">#query</span>
- </div>
- </div>
- </a>
+  <a href="/brunodrugowick" class="ltag__link__link">
+    <div class="ltag__link__pic">
+      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
+    </div>
+  </a>
+  <a href="/brunodrugowick/spring-data-jpa-query-methods-l43" class="ltag__link__link">
+    <div class="ltag__link__content">
+      <h2>Spring Data JPA Query Methods</h2>
+      <h3>Bruno Drugowick ・ Jan 15 '20 ・ 4 min read</h3>
+      <div class="ltag__link__taglist">
+        <span class="ltag__link__tag">#java</span>
+        <span class="ltag__link__tag">#spring</span>
+        <span class="ltag__link__tag">#jpa</span>
+        <span class="ltag__link__tag">#query</span>
+      </div>
+    </div>
+  </a>
 </div>
 
 
 <h3>
- <a name="2-jpql-within-the-source-code" href="#2-jpql-within-the-source-code">
- </a>
- 2. JPQL within the source code
+  <a name="2-jpql-within-the-source-code" href="#2-jpql-within-the-source-code">
+  </a>
+  2. JPQL within the source code
 </h3>
 
 <p>@Query annotation.</p>
 
 
 <div class="ltag__link">
- <a href="/brunodrugowick" class="ltag__link__link">
- <div class="ltag__link__pic">
- <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
- </div>
- </a>
- <a href="/brunodrugowick/using-jpql-with-spring-data-jpa-48c0" class="ltag__link__link">
- <div class="ltag__link__content">
- <h2>Using JPQL with Spring Data JPA</h2>
- <h3>Bruno Drugowick ・ Jan 30 '20 ・ 2 min read</h3>
- <div class="ltag__link__taglist">
- <span class="ltag__link__tag">#java</span>
- <span class="ltag__link__tag">#spring</span>
- <span class="ltag__link__tag">#jpa</span>
- <span class="ltag__link__tag">#jpql</span>
- </div>
- </div>
- </a>
+  <a href="/brunodrugowick" class="ltag__link__link">
+    <div class="ltag__link__pic">
+      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
+    </div>
+  </a>
+  <a href="/brunodrugowick/using-jpql-with-spring-data-jpa-48c0" class="ltag__link__link">
+    <div class="ltag__link__content">
+      <h2>Using JPQL with Spring Data JPA</h2>
+      <h3>Bruno Drugowick ・ Jan 30 '20 ・ 2 min read</h3>
+      <div class="ltag__link__taglist">
+        <span class="ltag__link__tag">#java</span>
+        <span class="ltag__link__tag">#spring</span>
+        <span class="ltag__link__tag">#jpa</span>
+        <span class="ltag__link__tag">#jpql</span>
+      </div>
+    </div>
+  </a>
 </div>
 
 
 <h3>
- <a name="3-externalized-jpql-with-raw-ormxml-endraw-file" href="#3-externalized-jpql-with-raw-ormxml-endraw-file">
- </a>
- 3. Externalized JPQL with <code>orm.xml</code> file
+  <a name="3-externalized-jpql-with-raw-ormxml-endraw-file" href="#3-externalized-jpql-with-raw-ormxml-endraw-file">
+  </a>
+  3. Externalized JPQL with <code>orm.xml</code> file
 </h3>
 
 <p>Well, there's this. =|</p>
 
 
 <div class="ltag__link">
- <a href="/brunodrugowick" class="ltag__link__link">
- <div class="ltag__link__pic">
- <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
- </div>
- </a>
- <a href="/brunodrugowick/using-jpql-on-orm-xml-file-with-spring-data-jpa-39ej" class="ltag__link__link">
- <div class="ltag__link__content">
- <h2>Using JPQL on orm.xml file with Spring Data JPA</h2>
- <h3>Bruno Drugowick ・ Feb 11 '20 ・ 2 min read</h3>
- <div class="ltag__link__taglist">
- <span class="ltag__link__tag">#spring</span>
- <span class="ltag__link__tag">#jpa</span>
- <span class="ltag__link__tag">#repository</span>
- <span class="ltag__link__tag">#xml</span>
- </div>
- </div>
- </a>
+  <a href="/brunodrugowick" class="ltag__link__link">
+    <div class="ltag__link__pic">
+      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
+    </div>
+  </a>
+  <a href="/brunodrugowick/using-jpql-on-orm-xml-file-with-spring-data-jpa-39ej" class="ltag__link__link">
+    <div class="ltag__link__content">
+      <h2>Using JPQL on orm.xml file with Spring Data JPA</h2>
+      <h3>Bruno Drugowick ・ Feb 11 '20 ・ 2 min read</h3>
+      <div class="ltag__link__taglist">
+        <span class="ltag__link__tag">#spring</span>
+        <span class="ltag__link__tag">#jpa</span>
+        <span class="ltag__link__tag">#repository</span>
+        <span class="ltag__link__tag">#xml</span>
+      </div>
+    </div>
+  </a>
 </div>
 
 
 <h3>
- <a name="4-custom-spring-data-jpa-repository-method" href="#4-custom-spring-data-jpa-repository-method">
- </a>
- 4. Custom Spring Data JPA Repository method
+  <a name="4-custom-spring-data-jpa-repository-method" href="#4-custom-spring-data-jpa-repository-method">
+  </a>
+  4. Custom Spring Data JPA Repository method
 </h3>
 
 <p>Java code is added to the mix and dynamic stuff is now possible!</p>
 
 
 <div class="ltag__link">
- <a href="/brunodrugowick" class="ltag__link__link">
- <div class="ltag__link__pic">
- <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
- </div>
- </a>
- <a href="/brunodrugowick/four-steps-to-extend-a-spring-data-jpa-repository-with-your-own-code-53b0" class="ltag__link__link">
- <div class="ltag__link__content">
- <h2>Three steps to extend a Spring Data JPA repository with your own code</h2>
- <h3>Bruno Drugowick ・ Feb 21 '20 ・ 5 min read</h3>
- <div class="ltag__link__taglist">
- <span class="ltag__link__tag">#spring</span>
- <span class="ltag__link__tag">#repository</span>
- <span class="ltag__link__tag">#java</span>
- <span class="ltag__link__tag">#jpa</span>
- </div>
- </div>
- </a>
+  <a href="/brunodrugowick" class="ltag__link__link">
+    <div class="ltag__link__pic">
+      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
+    </div>
+  </a>
+  <a href="/brunodrugowick/four-steps-to-extend-a-spring-data-jpa-repository-with-your-own-code-53b0" class="ltag__link__link">
+    <div class="ltag__link__content">
+      <h2>Three steps to extend a Spring Data JPA repository with your own code</h2>
+      <h3>Bruno Drugowick ・ Feb 21 '20 ・ 5 min read</h3>
+      <div class="ltag__link__taglist">
+        <span class="ltag__link__tag">#spring</span>
+        <span class="ltag__link__tag">#repository</span>
+        <span class="ltag__link__tag">#java</span>
+        <span class="ltag__link__tag">#jpa</span>
+      </div>
+    </div>
+  </a>
 </div>
 
 
 <h3>
- <a name="5-use-of-criteria-api" href="#5-use-of-criteria-api">
- </a>
- 5. Use of Criteria API
+  <a name="5-use-of-criteria-api" href="#5-use-of-criteria-api">
+  </a>
+  5. Use of Criteria API
 </h3>
 
 <p>More dynamic.</p>
@@ -183,9 +204,9 @@ categories:
 </ul>
 
 <h3>
- <a name="6-use-of-specification-design-pattern" href="#6-use-of-specification-design-pattern">
- </a>
- 6. Use of Specification design pattern
+  <a name="6-use-of-specification-design-pattern" href="#6-use-of-specification-design-pattern">
+  </a>
+  6. Use of Specification design pattern
 </h3>
 
 <p>More and more dynamic!</p>
@@ -196,9 +217,9 @@ categories:
 </ul>
 
 <h3>
- <a name="7-overriding-springs-default-implementation-for-jparepository" href="#7-overriding-springs-default-implementation-for-jparepository">
- </a>
- 7. Overriding Spring's default implementation for JpaRepository
+  <a name="7-overriding-springs-default-implementation-for-jparepository" href="#7-overriding-springs-default-implementation-for-jparepository">
+  </a>
+  7. Overriding Spring's default implementation for JpaRepository
 </h3>
 
 <p>Now you'll feel like a JPA god!</p>
@@ -209,9 +230,9 @@ categories:
 </ul>
 
 <h3>
- <a name="8-bonus-use-of-querydsl" href="#8-bonus-use-of-querydsl">
- </a>
- 8. BONUS: use of <a href="http://www.querydsl.com/">Querydsl</a>
+  <a name="8-bonus-use-of-querydsl" href="#8-bonus-use-of-querydsl">
+  </a>
+  8. BONUS: use of <a href="http://www.querydsl.com/">Querydsl</a>
 </h3>
 
 <p>I don't even know what this is right now but I'll figure it out. Looks cool, though!</p>
@@ -222,17 +243,17 @@ categories:
 </ul>
 
 <h2>
- <a name="thanks-to" href="#thanks-to">
- </a>
- Thanks to
+  <a name="thanks-to" href="#thanks-to">
+  </a>
+  Thanks to
 </h2>
 
 <p>Most of what you see here I learnt on a <a href="https://cafe.algaworks.com/lista-espera-spring-rest/">course from Algaworks (in Portuguese)</a> about REST APIs with Spring, where JPA is a huge section. I recommend the course if you speak Portuguese.</p>
 
 <h2>
- <a name="not-included" href="#not-included">
- </a>
- Not Included
+  <a name="not-included" href="#not-included">
+  </a>
+  Not Included
 </h2>
 
 <p>I won't cover any of this:</p>

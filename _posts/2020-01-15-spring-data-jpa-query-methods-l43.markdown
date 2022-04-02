@@ -2,10 +2,31 @@
 layout: post
 title:  "Spring Data JPA Query Methods"
 date:   2020-01-15T07:19:06Z
-categories: 
 ---
 
-> <div class=card><div class=container><h4><b><a href="https://dev.to/brunodrugowick/spring-data-jpa-query-methods-l43">You'll have a better experience reading in DEV...</a></b></h4><i><p>However, if you want to know more about the project to mirror my posts from DEV here (and why), go ahead and <a href="https://dev.to/brunodrugowick/spring-data-jpa-query-methods-l43">read more</a>.</p><p>You can continue to read here too, it's up to you...</p></i></div></div>
+<style type="text/css" media="screen">
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .container {
+    padding: 2px 16px;
+  }
+</style>
+
+<code>[java, spring, jpa, query]</code>
+<div class=card>
+	  <div class=container>
+	    <h4><b><br>You'll have a better experience reading in DEV</b></h4>
+	    <p><a href="https://dev.to/brunodrugowick/spring-data-jpa-query-methods-l43" target="_blank">Click here to continue reading this post there >></a></p>
+	    <p>However, if you want to know more about the project to mirror my posts from DEV here (and why), go ahead and <a href="https://dev.to/brunodrugowick/spring-data-jpa-query-methods-l43" target="_blank">read more</a>.</p>
+	    <p>You can continue to read here too, it's up to you... =]</p>
+	  </div>
+	</div><br>
 <p>This is the post #3 of the series "Querying your Spring Data JPA Repository".</p>
 
 <p>If you're following the series, by now you have an app with a list of Restaurants. The list is fetched using the method <code>findAll()</code> which you did not implement, because it was provided by Spring Data JPA when you created the <code>RestaurantRepository</code> class extending Spring's <code>JpaRepository</code> class.</p>
@@ -14,30 +35,30 @@ categories:
 
 
 <div class="ltag__link">
- <a href="/brunodrugowick" class="ltag__link__link">
- <div class="ltag__link__pic">
- <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
- </div>
- </a>
- <a href="/brunodrugowick/querying-your-spring-data-jpa-repository-basic-setup-1i8p" class="ltag__link__link">
- <div class="ltag__link__content">
- <h2>Querying your Spring Data JPA Repository - Basic Setup</h2>
- <h3>Bruno Drugowick ・ Jan 12 '20 ・ 4 min read</h3>
- <div class="ltag__link__taglist">
- <span class="ltag__link__tag">#java</span>
- <span class="ltag__link__tag">#spring</span>
- <span class="ltag__link__tag">#jpa</span>
- <span class="ltag__link__tag">#repository</span>
- </div>
- </div>
- </a>
+  <a href="/brunodrugowick" class="ltag__link__link">
+    <div class="ltag__link__pic">
+      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--U-wFRb7a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--LpCY0EbU--/c_fill%2Cf_auto%2Cfl_progressive%2Ch_150%2Cq_auto%2Cw_150/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/213112/5bb8eb2e-29a2-4307-be73-1ffdd76f8f9c.jpg" alt="brunodrugowick" loading="lazy">
+    </div>
+  </a>
+  <a href="/brunodrugowick/querying-your-spring-data-jpa-repository-basic-setup-1i8p" class="ltag__link__link">
+    <div class="ltag__link__content">
+      <h2>Querying your Spring Data JPA Repository - Basic Setup</h2>
+      <h3>Bruno Drugowick ・ Jan 12 '20 ・ 4 min read</h3>
+      <div class="ltag__link__taglist">
+        <span class="ltag__link__tag">#java</span>
+        <span class="ltag__link__tag">#spring</span>
+        <span class="ltag__link__tag">#jpa</span>
+        <span class="ltag__link__tag">#repository</span>
+      </div>
+    </div>
+  </a>
 </div>
 
 
 <h1>
- <a name="the-task" href="#the-task">
- </a>
- The Task
+  <a name="the-task" href="#the-task">
+  </a>
+  The Task
 </h1>
 
 <p>Let's say that now you have to add a search bar on top of the list in order to filter it. The search must match any Restaurant name that contains the text the user types.</p>
@@ -47,17 +68,17 @@ categories:
 <p>As you can see, if the user types <code>Ma</code> three Restaurants are shown: <code>Mamma Mia</code>; <code>La Maison du Croissant</code>; and <code>Marcante Pizzaria</code>. They all contain <code>Ma</code> in their names.</p>
 
 <h1>
- <a name="preparing-the-application" href="#preparing-the-application">
- </a>
- Preparing the application
+  <a name="preparing-the-application" href="#preparing-the-application">
+  </a>
+  Preparing the application
 </h1>
 
 <p>Well, let's prepare our app to work with this new requirement.</p>
 
 <h3>
- <a name="search-bar" href="#search-bar">
- </a>
- Search bar
+  <a name="search-bar" href="#search-bar">
+  </a>
+  Search bar
 </h3>
 
 <p>Let's add a search bar with the following Thymeleaf code on the <code>index.html</code> file:<br>
@@ -65,22 +86,22 @@ categories:
 
 <div class="highlight js-code-highlight">
 <pre class="highlight html"><code><span class="nt">&lt;form</span> <span class="na">th:action=</span><span class="s">"@{/search}"</span><span class="nt">&gt;</span>
- Search by:
- <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"field"</span><span class="nt">&gt;</span>
- <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"name"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/option&gt;</span>
- <span class="nt">&lt;/select&gt;</span>
- <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Your search query"</span> <span class="na">th:name=</span><span class="s">"query"</span> <span class="na">th:value=</span><span class="s">"${query}"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">/&gt;</span>
- <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">/&gt;</span>
+    Search by:
+    <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"name"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Your search query"</span> <span class="na">th:name=</span><span class="s">"query"</span> <span class="na">th:value=</span><span class="s">"${query}"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 </code></pre>
 <div class="highlight__panel js-actions-panel">
 <div class="highlight__panel-action js-fullscreen-code-action">
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
- <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
 </svg>
 
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
- <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
 </svg>
 
 </div>
@@ -99,9 +120,9 @@ categories:
 
 <p>The URL after clicking Search with <code>Ma</code> on the search field would be <code>https://whatever-your-server-is/search?field=name&amp;query=Ma</code>.</p>
 <h3>
- <a name="controller-method" href="#controller-method">
- </a>
- Controller method
+  <a name="controller-method" href="#controller-method">
+  </a>
+  Controller method
 </h3>
 
 <p>We need a method on the <code>IndexPage.java</code> controller to handle the search for the user. This is the method that does the trick:<br>
@@ -109,24 +130,24 @@ categories:
 <div class="highlight js-code-highlight">
 <pre class="highlight java"><code><span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/search"</span><span class="o">)</span>
 <span class="kd">public</span> <span class="nc">String</span> <span class="nf">indexWithQuery</span><span class="o">(</span><span class="nd">@RequestParam</span><span class="o">(</span><span class="s">"query"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">query</span><span class="o">,</span>
- <span class="nd">@RequestParam</span><span class="o">(</span><span class="s">"field"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">field</span><span class="o">,</span>
- <span class="nc">Model</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span>
- <span class="k">if</span> <span class="o">(</span><span class="n">field</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"name"</span><span class="o">))</span> <span class="o">{</span>
- <span class="c1">// TODO add search by name here.</span>
- <span class="o">}</span>
- <span class="n">model</span><span class="o">.</span><span class="na">addAttribute</span><span class="o">(</span><span class="s">"field"</span><span class="o">,</span> <span class="n">field</span><span class="o">);</span>
- <span class="n">model</span><span class="o">.</span><span class="na">addAttribute</span><span class="o">(</span><span class="s">"query"</span><span class="o">,</span> <span class="n">query</span><span class="o">);</span>
- <span class="k">return</span> <span class="s">"index"</span><span class="o">;</span>
+                             <span class="nd">@RequestParam</span><span class="o">(</span><span class="s">"field"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">field</span><span class="o">,</span>
+                             <span class="nc">Model</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">field</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"name"</span><span class="o">))</span> <span class="o">{</span>
+        <span class="c1">// TODO add search by name here.</span>
+    <span class="o">}</span>
+    <span class="n">model</span><span class="o">.</span><span class="na">addAttribute</span><span class="o">(</span><span class="s">"field"</span><span class="o">,</span> <span class="n">field</span><span class="o">);</span>
+    <span class="n">model</span><span class="o">.</span><span class="na">addAttribute</span><span class="o">(</span><span class="s">"query"</span><span class="o">,</span> <span class="n">query</span><span class="o">);</span>
+    <span class="k">return</span> <span class="s">"index"</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre>
 <div class="highlight__panel js-actions-panel">
 <div class="highlight__panel-action js-fullscreen-code-action">
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
- <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
 </svg>
 
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
- <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
 </svg>
 
 </div>
@@ -151,9 +172,9 @@ categories:
 <li>and redirects the user to the index page with the new information we just (not yet :) got. =P</li>
 </ul>
 <h1>
- <a name="finally-querying-the-repository" href="#finally-querying-the-repository">
- </a>
- Finally querying the Repository
+  <a name="finally-querying-the-repository" href="#finally-querying-the-repository">
+  </a>
+  Finally querying the Repository
 </h1>
 
 <p>Well, looks like we have to do the heavy work now, which is to find all the Restaurants containing a certain string on their names.</p>
@@ -165,12 +186,12 @@ categories:
 </code></pre>
 <div class="highlight__panel js-actions-panel">
 <div class="highlight__panel-action js-fullscreen-code-action">
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
- <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
 </svg>
 
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
- <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
 </svg>
 
 </div>
@@ -185,12 +206,12 @@ categories:
 </code></pre>
 <div class="highlight__panel js-actions-panel">
 <div class="highlight__panel-action js-fullscreen-code-action">
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
- <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
 </svg>
 
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
- <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
 </svg>
 
 </div>
@@ -200,9 +221,9 @@ categories:
 
 <p>... your new search is working! <a href="https://jpa-queries-blog-post.herokuapp.com/search?field=name&amp;query=Ma">Want to try?</a> </p>
 <h1>
- <a name="how-it-works" href="#how-it-works">
- </a>
- How it works
+  <a name="how-it-works" href="#how-it-works">
+  </a>
+  How it works
 </h1>
 
 <p>It's quite simple, actually: Spring Data parses the method name based on certain criteria and creates a query for you. Here's how it goes for this example (<code>findAllByNameContaining(String name)</code>):</p>
@@ -252,25 +273,25 @@ categories:
 <div class="highlight js-code-highlight">
 <pre class="highlight java"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RestaurantRepository</span> <span class="kd">extends</span> <span class="nc">JpaRepository</span><span class="o">&lt;</span><span class="nc">Restaurant</span><span class="o">,</span> <span class="nc">Long</span><span class="o">&gt;</span> <span class="o">{</span>
 
- <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Restaurant</span><span class="o">&gt;</span> <span class="nf">findAllByNameContaining</span><span class="o">(</span><span class="nc">String</span> <span class="n">query</span><span class="o">);</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Restaurant</span><span class="o">&gt;</span> <span class="nf">findAllByNameContaining</span><span class="o">(</span><span class="nc">String</span> <span class="n">query</span><span class="o">);</span>
 
- <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Restaurant</span><span class="o">&gt;</span> <span class="nf">findAllByCuisineNameContaining</span><span class="o">(</span><span class="nc">String</span> <span class="n">cuisine</span><span class="o">);</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Restaurant</span><span class="o">&gt;</span> <span class="nf">findAllByCuisineNameContaining</span><span class="o">(</span><span class="nc">String</span> <span class="n">cuisine</span><span class="o">);</span>
 
- <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Restaurant</span><span class="o">&gt;</span> <span class="nf">findAllByDeliveryFeeIsLessThanEqual</span><span class="o">(</span><span class="nc">BigDecimal</span> <span class="n">deliveryFee</span><span class="o">);</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Restaurant</span><span class="o">&gt;</span> <span class="nf">findAllByDeliveryFeeIsLessThanEqual</span><span class="o">(</span><span class="nc">BigDecimal</span> <span class="n">deliveryFee</span><span class="o">);</span>
 
- <span class="kt">long</span> <span class="nf">countByCuisineName</span><span class="o">(</span><span class="nc">String</span> <span class="n">cuisine</span><span class="o">);</span>
+    <span class="kt">long</span> <span class="nf">countByCuisineName</span><span class="o">(</span><span class="nc">String</span> <span class="n">cuisine</span><span class="o">);</span>
 
- <span class="nc">Restaurant</span> <span class="nf">findTopByCuisineNameOrderByDeliveryFeeAsc</span><span class="o">(</span><span class="nc">String</span> <span class="n">cuisine</span><span class="o">);</span>
+    <span class="nc">Restaurant</span> <span class="nf">findTopByCuisineNameOrderByDeliveryFeeAsc</span><span class="o">(</span><span class="nc">String</span> <span class="n">cuisine</span><span class="o">);</span>
 <span class="o">}</span>
 </code></pre>
 <div class="highlight__panel js-actions-panel">
 <div class="highlight__panel-action js-fullscreen-code-action">
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
- <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
 </svg>
 
- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
- <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
 </svg>
 
 </div>
@@ -280,34 +301,34 @@ categories:
 
 <p>You can find more information, including a list of supported keywords on the <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods">official documentation</a>.</p>
 <h1>
- <a name="the-example-app" href="#the-example-app">
- </a>
- The example app
+  <a name="the-example-app" href="#the-example-app">
+  </a>
+  The example app
 </h1>
 
 <p>The working app is <a href="https://jpa-queries-blog-post.herokuapp.com/">here</a> (wait for Heroku to load the app, it takes a few seconds on the free tier).</p>
 <h1>
- <a name="commits-related-to-this-post" href="#commits-related-to-this-post">
- </a>
- Commits related to this post
+  <a name="commits-related-to-this-post" href="#commits-related-to-this-post">
+  </a>
+  Commits related to this post
 </h1>
 
 <p>Adds the search bar: <a href="https://github.com/brunodrugowick/jpa-queries-blog-post/commit/d5a02bb903482e988e714e5c3b7ae64e81b49bb8">d5a02bb</a><br>
-Adds search options and cuisine page: <a href="https://github.com/brunodrugowick/jpa-queries-blog-post/commit/dd6793b957edb5426b1846750e0d4a460836b2ea">dd6793b</a> commit. </p>
+Adds search options and cuisine page:  <a href="https://github.com/brunodrugowick/jpa-queries-blog-post/commit/dd6793b957edb5426b1846750e0d4a460836b2ea">dd6793b</a> commit. </p>
 
 
 <div class="ltag-github-readme-tag">
- <div class="readme-overview">
- <h2>
- <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--566lAguM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/github-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg" alt="GitHub logo" loading="lazy">
- <a href="https://github.com/brunodrugowick">
- brunodrugowick
- </a> / <a style="font-weight: 600;" href="https://github.com/brunodrugowick/jpa-queries-blog-post">
- jpa-queries-blog-post
- </a>
- </h2>
- <h3>
- A demo project for a blog post about (Spring Data) JPA.
- </h3>
- </div>
+  <div class="readme-overview">
+    <h2>
+      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--566lAguM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/github-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg" alt="GitHub logo" loading="lazy">
+      <a href="https://github.com/brunodrugowick">
+        brunodrugowick
+      </a> / <a style="font-weight: 600;" href="https://github.com/brunodrugowick/jpa-queries-blog-post">
+        jpa-queries-blog-post
+      </a>
+    </h2>
+    <h3>
+      A demo project for a blog post about (Spring Data) JPA.
+    </h3>
+  </div>
 </div>...
