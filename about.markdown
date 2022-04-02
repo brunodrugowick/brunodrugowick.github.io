@@ -21,8 +21,8 @@ Yeah, that's me... :)
 
 ## Versions of Me
 
-![2022](/img/Eu_2022.jpg)
+![2022](/assets/img/Eu_2022.jpg)
 
-![2021](/img/Eu_2021.jpg)
+![2021](/assets/img/Eu_2021.jpg)
 
-![2019](/img/Eu_2019.jpg)
+![2019](/assets/img/Eu_2019.jpg)
