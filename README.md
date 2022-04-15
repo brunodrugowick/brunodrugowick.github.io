@@ -27,4 +27,15 @@ There's way more to learn about GitHub Pages and Jekyll, but I'd like to suggest
 
 Jekyll Data Files are very useful to organize the information on your GitHub Page. It gives you the ability to edit sections of your page without touching the markup file (.md or .html), just like I taught you with the Posts, but for your own data structures. 
 
-If you want to take a look, this websites uses, so far, Data Files for the "Useful Links" and "Active Projects" sections.
+## Development
+
+Because I always forget:
+
+```
+bundle install
+```
+
+```
+bundle exec jekyll serve
+```
+
