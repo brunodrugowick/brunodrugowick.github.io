@@ -67,4 +67,3 @@ do
     sed -i 's/{{DATE}}/'"$POST_DATE"'/1' "$POST_FILENAME"
 done
 
-date >last_updated_date
