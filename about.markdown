@@ -21,8 +21,6 @@ Yeah, that's me... :)
 
 ## Versions of Me
 
-![2022](/assets/img/Eu_2022.jpg)
+I used to have pictures here, so you know who's talking to you through these words. However, people keep using my pictures to try to scam friends and family members into giving them money. 
 
-![2021](/assets/img/Eu_2021.jpg)
-
-![2019](/assets/img/Eu_2019.jpg)
+"Este mundo é mesmo muito terrível grazni voni, Ó, meus irmãos" (Laranja Mecânica, Anthony Burgess)
