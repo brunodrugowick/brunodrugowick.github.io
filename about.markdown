@@ -12,8 +12,6 @@ To really talk about myself I'd have to have a personal blog or something, so I 
 
 Well, I started this text trying not to talk about myself, but that and the three paragraphs above end up saying a lot about myself, I think.
 
-Yeah, that's me... :)
-
 ## Contact
 
 {% for link in site.data.links %}
